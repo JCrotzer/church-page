@@ -5,16 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/homepage.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>First Baptist Church Homepage</title>
 </head>
 <body>
     <main class="container">
-        <div class="navbar">
-            <div class="logo">
-                <img src="{{url_for(static', filename='img/cross.jpg') }}" alt="Cross">
-                <h2>First Baptist Church of Spring Hill</h2>
+        <nav class="navbar">
+            <div class="nav">
+                <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross">
+                <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
             </div>
-        </div>
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <ul class="menu-items">
+                        <li><a href="#">Home</a></li>
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">About Us</a>
+                            <ul>
+                                <li><a href="#" class="dropdown-item">New Here?</a></li>
+                                <li><a href="#">What We Believe</a></li>
+                                <li><a href="#">Meet Our Pastor</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ministries</a>
+                            <ul>
+                                <li><a href="#">Get Connected</a></li>
+                                <li><a href="#">Children</a></li>
+                                <li><a href="#">Students</a></li>
+                                <li><a href="#">Adults</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Watch/Read</a>
+                            <ul>
+                                <li><a href="#">Sermons</a></li>
+                                <li><a href="#">Bulletin</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Give</a></li>
+                        <button class="account">My Account</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="showcase-area">
+            <div class="showcase-container">
+                <img src="{{ url_for('static', filename='img/cross3.jpg') }}" class="main-img" alt="Cross">
+            </div>
+        </section>
+        <!-- Images and videos -->
+        <section id="carouselImages" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/youth1.jpg') }}" class="img-1 d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/youth2.jpg') }}" class="img-2 d-block w-100" alt="">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/youth3.jpg') }}" class="img-3 d-block w-100" alt="">
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

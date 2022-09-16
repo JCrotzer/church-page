@@ -1,0 +1,243 @@
+:root {
+    color:gray;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: lightgray;
+    overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAVBAR */
+
+.logo {
+    width: 30%;
+    height: 70%;
+}
+.nav h2 {
+    width: 300px;
+    font-family: 'Allura', cursive;
+    font-size: 28px;
+    color: gray;
+    margin-left: -40px;
+    line-height: 30px;
+}
+
+.nav span {
+    margin-left: 50px;
+    font-size: 24px;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    opacity: 0.95;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: -10px;
+}
+
+
+ /* HAMBURGER MENU */
+
+
+.toggler {
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9.6px;
+}
+
+/* CREATING THE MIDDLE LINE OF THE HAMBURGER */
+
+.hamburger > div{
+    position: relative;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 2px;
+    width: 60%;
+    transition: all 0.4s ease;
+}
+
+/* CREATING THE TOP AND BOTTOM LINES */
+
+.hamburger > div::before,
+.hamburger > div::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    background: black;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease;
+}
+
+.hamburger > div::after{
+    top: 10px;
+}
+
+/* IF TOGGLER IS IN ITS CHECKED STATE */
+
+.toggler:checked + .hamburger > div{
+    background: rgba(0,0,0,0);
+} 
+
+.toggler:checked + .hamburger >
+div::before{
+    top: 0;
+    transform: rotate(45deg);
+    background: black;
+} 
+
+/* ROTATING THE TOP AND BOTTOM LINES */
+
+.toggler:checked + .hamburger >
+div::after{
+    top: 0;
+    transform: rotate(135deg);
+    background: black;
+}
+
+/* MAIN MENU WITH THE GRAY BACKGROUND AND THE TEXT */
+
+.menu{
+    background: darkgray;
+    width: 0%;
+    height: 100vh;
+    position: relative;
+
+/* APPLYING TRANSITION TO THE MENU */
+    transition: all 0.4s ease;
+}
+
+/* IF THE TOGGLER IS CHECKED THEN INCREASE THE WIDTH OF THE MENU TO 30% */
+
+.toggler:checked ~ .menu{
+    width: 65%;
+}
+
+/* STYLING THE LIST */
+
+.menu > div > ul{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 40px;
+    right: -20px;
+    padding-right: 10px;
+
+    visibility: hidden;
+}
+
+.menu > div > ul > li {
+    list-style: none;
+    padding: 8px 30px 8px 8px;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(53, 49, 49);
+}
+
+.menu > div > ul > li > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > div > ul > li > ul > li {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+}
+
+/* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE */
+
+.toggler:checked ~ .menu > div > ul{
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+}
+
+/* BUTTON */
+
+.account {
+    width: 150px;
+    height: 30px;
+    border-radius: 24px; 
+    border: 1px solid darkgrey;
+} 
+
+/* Main section with images */
+
+.showcase-area {
+    width: 500px;
+    height: 400px;
+}
+
+#carouselImages {
+    display: none;
+}
+
+section {
+    width: 500px;
+    height: 400px;
+}
+
+.img-1, .img-2, .img-3 {
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
