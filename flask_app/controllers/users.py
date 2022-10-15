@@ -1,5 +1,5 @@
 from flask_app import app
-from flask import render_template, redirect, request, session,flash
+from flask import render_template, redirect, request, session, flash
 from flask_app.models.user import User
 
 from flask_bcrypt import Bcrypt
@@ -38,3 +38,16 @@ def login_user():
 @app.route('/')
 def index():
     return render_template("homepage.html")
+
+@app.route('/users/account')
+def user_account():
+    return render_template("user_account.html")
+
+@app.route('/new_here/')
+def visitor_page():
+    return render_template("new_visitor.html")
+
+@app.route('/user/logout')
+def logout():
+    session.pop("user_id")
+    return redirect('/')

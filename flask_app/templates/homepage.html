@@ -23,7 +23,7 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://use.fontawesome.com/add85f306e.js"></script>
-        <title>First Baptist Church Homepage</title>
+    <title>First Baptist Church Homepage</title>
 </head>
 
 <body>
@@ -38,11 +38,11 @@
     </header>
         
         <div class="xs-menu-cont">
-        <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+        <a id="menutoggle"><i class="fa fa-align-justify"></i></a>
             <nav class="xs-menu displaynone">
                 <ul>
-                    <li class="active">
-                        <a href="#">Home</a>
+                    <li>
+                        <a href="/">Home</a>
                     </li>
                     <li class="drop-down">
                         <a href="#">About Us</a>
@@ -50,7 +50,9 @@
                         <div class="mm-6column">
                             <span class="categories-list">
                             <ul>
-                                <li>New Here?</li>
+                                <li>
+                                    <a href="/new_here/">New Here?</a>
+                                </li>
                                 <li>What we believe</li>
                                 <li>Our Team</li>
                                 <li>Contact</li>
@@ -71,20 +73,28 @@
                         <a href="#">Give</a>
                     </li>
                     <li>
-                        <button class="account" type="submit">My Account</button>
+                        <a href="/users/account" class="account-btn">
+                            My Account
+                        </a>
                     </li>
                 </ul>
+                
             </nav>
         </div>
         <nav class="menu">
             <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
                 <li class="drop-down">
                     <a href="#">About Us</a>
                 <div class="mega-menu fadeIn animated">
                     <div class="mm-6column">
                         <span class="categories-list">
                         <ul>
-                            <li>New Here?</li>
+                            <li>
+                                <a href="/new_here/">New Here?</a>
+                            </li>
                             <li>What we believe</li>
                             <li>Meet Our Team</li>
                             <li>Contact</li>
@@ -105,7 +115,9 @@
                     <a href="#">Give</a>
                 </li>
                 <li>
-                    <a href="#"><button class="account" type="submit">My Account</button></a>
+                    <a href="/users/account" class="account-btn">
+                        My Account
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -214,7 +226,7 @@
             <h1 class="sermon-title">Sermons</h1>
             <button class="sermon-btn"><a href="">Browse Sermons</a></button>
             <div class="video">
-                <iframe width="350" height="315" src="https://www.youtube.com/embed/XYosnDIA-EQ"
+                <iframe width="300" height="315" src="https://www.youtube.com/embed/XYosnDIA-EQ"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -253,7 +265,9 @@
                 <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
                     Spring Hill,TN 37174
                 </p>
-                <button class="account account-footer">My Account</button>
+                <div class="account-login">
+                    <a href="/users/account" class="account">My Account</a>
+                </div>
             </div>
             <div class="footer-info">
                 <div class="our-church">
@@ -284,7 +298,6 @@
                 <img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon">
             </div>
         </div>
-        </section>
     <!-- </main> -->
 
     <!-- Bootstrap JS -->

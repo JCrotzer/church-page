@@ -22,6 +22,7 @@ body {
 	color: #e5e5e5;
 	font-size: 12px;
 	line-height: 1;
+    overflow-x: hidden;
 }
 *, *:before, *:after {
     box-sizing: border-box;
@@ -82,7 +83,7 @@ header span {
     clear : both;
 }
 
-nav.menu {
+nav.menu > {
 	background: coral;
 	position: relative;
 	min-height: 50px;
@@ -96,11 +97,12 @@ nav.menu {
 	color: #fff;
 	line-height: 60px;
 }
+
 .menu > ul li a, .xs-menu li a {
 	text-decoration: none;
 	color: #fff;
 	display:block;
-	padding: 0px 13px;
+	padding: 5px 13px;
 }
 
 .menu > ul li a:hover {
@@ -114,12 +116,15 @@ nav.menu {
 	background:#444 !important;
 	
 }
+
 .displaynone{
 	display: none;
 }
+
 .xs-menu-cont{
 display:none;
 }
+
 .xs-menu-cont > a {
     background: none repeat scroll 0 0 #ff7f50;
     border-radius: 3px;
@@ -173,9 +178,11 @@ display:none;
 }
 
 .mm-6column, .mm-3column {
+    float: left;
     text-align: center;
     position: relative;
 }
+
 .mm-6column {
     width: 50%;
     height: 100%;
@@ -231,6 +238,27 @@ display:none;
     margin-left: 5px;
 }
 
+.account-btn {
+    width: 125px;
+    height: 30px;
+    border-radius: 24px;
+    border: none;
+    background-color: rgb(71, 63, 63);
+    color: white;
+    font-weight: 700;
+    padding: 5px;
+}
+
+a.account-btn {
+    text-align: center;
+    text-decoration: none;
+}
+
+.account-btn:hover {
+    color: black;
+    font-weight:700;
+}
+
     /*MediaQuerys*/
 @media (max-width: 600px) {
     .menu {
@@ -244,6 +272,8 @@ display:none;
     display:block;
 }
 }
+
+
 
 
 /*Animation--*/
@@ -304,21 +334,7 @@ display:none;
     gap: 20px;
 }
 
-.account {
-    /* margin-top: 40px; */
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    border-radius: 24px; 
-    border: none;
-    font-weight: 700;
-    background-color: white;
-    color: coral;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 10px 0 0;
-} 
+
 
 /* Main section with images */
 
@@ -664,9 +680,8 @@ display:none;
 
 iframe {
     margin: 30px 0px;
-    /* width: 350px;
-    height: 300px; */
-    padding: 0 35px 0 0;
+    width: 70%;
+    padding: 0 50px 0 0;
 }
 
 .showcase .newsletter {
@@ -767,14 +782,41 @@ input {
 
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .container
-    nav.menu {
+
+    nav.menu > ul {
+        width: 100%;
         background: coral;
-        position: relative;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
         min-height: 50px;
         height: 100%;
         width: 100%;
     }
+
+    /* .account {
+        width: 125px;
+        height: 30px;
+        border-radius: 24px;
+        border: none;
+        background-color: rgb(71, 63, 63);
+        color: white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 5px; */
+    } */
+    
+    /* a.account:link {
+        text-align: start;
+        text-decoration: none;
+    } */
+    
+    /* .account:hover {
+        color: white;
+        font-weight:700;
+    } */ 
 
     .content p {
         text-align: center;

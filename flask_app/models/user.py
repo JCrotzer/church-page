@@ -20,4 +20,74 @@ class User:
 
 # CREATE
 
-    
+    @classmethod
+    def create_user(cls,data):
+        query = """
+        INSERT INTO users (first_name, last_name, email, password)
+        VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        return results
+
+    @classmethod
+    def login_user(cls, data):
+        this_user = cls.read_by_email(data['email'])
+        if this_user:
+            if bcrypt.check_password_hash(this_user.password, data['password']):
+                session['first_name'] = this_user.first_name
+                session['user_id'] = this_user.id
+        return this_user
+
+# READ
+
+    @classmethod
+    def read_by_email(cls, data):
+        query = """
+        SELECT * FROM users WHERE email = %(email)s
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        if len(results) < 1:
+            return False
+        return cls(results[0])
+
+    @classmethod
+    def read_by_username(cls, data):
+        query = "SELECT * FROM users WHERE first_name = %(first_name)s;"
+        results = connectToMySQL(cls.db).query_db(query, data)
+        if len(results) < 1:
+            return False
+        else:
+            return cls(results[0])
+
+    @classmethod
+    def read_by_id(cls, data):
+        query = """
+        SELECT * FROM users WHERE id = %(id)s
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        return cls(results[0])
+
+    @staticmethod 
+    def validate_register(user):
+        is_valid = True
+        query = "SELECT * FROM users WHERE email = %(email)s;"
+        results = connectToMySQL(User.db).query_db(query,{"email": user['email']})
+        if len(results) > 0:
+            flash("Email already taken")
+            is_valid = False
+        if not EMAIL_REGEX.match(user['email']):
+            flash("Invalid email!")
+            is_valid = False
+        if len(user['first_name']) < 3:
+            flash("First name must be at least 3 characters")
+            is_valid = False
+        if len(user['last_name']) < 3:
+            flash("Last name must be at least 3 characters")
+            is_valid = False
+        if len(user['password']) < 8:
+            flash("Password must be at least 8 characters")
+            is_valid = False
+        if user['password'] != user['confirm']:
+            flash("Passwords don't match!")
+            is_valid = False
+        return is_valid
