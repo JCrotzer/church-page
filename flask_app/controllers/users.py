@@ -47,6 +47,10 @@ def user_account():
 def visitor_page():
     return render_template("new_visitor.html")
 
+@app.route('/our_history/')
+def about_page():
+    return render_template("about_us.html")
+
 @app.route('/user/logout')
 def logout():
     session.pop("user_id")
