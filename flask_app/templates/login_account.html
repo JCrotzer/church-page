@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/new_visitor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/about_us.css') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Ms+Madi&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- 1. Owl Carousel Min.css -->
+        <!-- 1. Owl Carousel Min.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- 2. Owl Carousel Theme Min.css -->
+    <!-- 2. Owl Carousel Theme Min.css -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://use.fontawesome.com/add85f306e.js"></script>
-    <title>First Baptist Church-New Here?</title>
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://use.fontawesome.com/add85f306e.js"></script>
+    <title>First Baptist Church - About Us</title>
 </head>
 <body>
     <div class="container-lg">
@@ -117,6 +117,7 @@
                             </ul>
                             </span>
                         </div>
+                        </div>
                     </li>
                     <li>
                         <a href="#">Ministries</a>
@@ -137,68 +138,35 @@
                     </li>
                 </ul>
             </nav>
-    </div>
+        </div>
+
     <main>
-        <div class="journey-wrapper">
-            <img class="journey-img" src="{{ url_for('static', filename='img/journey1.jpg') }}" alt="journey-image">
-            <h2 class="journey-text">The Journey<br><span>Starts Here</span></h2>
-        </div>
-        
-        <div class="message">
-            <h2>Everyone has a next step. What's Yours?</h2>
-            <p>We hope our church can be a place where you connect to others and find a home. Here at our church, we believe 
-                in the core values of inclusivity and redemption, grace and love, and the transforming power of Christ. We are 
-                all committed to walking the journey together. Whether you're single, married, with or without children, young 
-                or old--we invite you to experience life and growing with us at First Baptist Church of Spring Hill.  
-            </p>
-            <p class="message2">We're so excited you're interested in learning more about who we are and joining the family!</p>
-        </div>
-
-        <div class="starting-point">
-            <img class="starting-img" src="{{ url_for('static', filename='img/starting_background.jpg') }}" alt="journey-image">
-            <h2 class="starting-text">Your Journey Begins<br>Here</h2>
-            <p class="starting-info">We welcome you to stop by the welcome desk located in the lobby of the main
-                entrance. Our volunteers can help you find information and get connected! We look
-                forward to meeting you!
-            </p>
-        </div>
-
-        <div class="small-groups">
-            <h2><span>Connect</span> with small groups</h2>
-            <p>Small groups are great for finding support, comfort and building close
-                friendships with others. In small groups, you will find a place to pray,
-                talk about life, laugh, hear others and their journey with Christ 
-                and even minister to others. Click the link below to see what
-                groups are meeting at this time. 
-            </p>
-            <a class="view_groups" href="">Find a group</a>
+        <div class="container signup p-5 d-flex justify-content-center">
+            <form action="/users/login" method="post">
+                <h2>Sign In</h2>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary text-dark">Login</button>
+                    <a href="/user/signup" class="ms-3 text-decoration-none text-dark">I need to create an account!</a>
+                </div>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <h1>Oh No!!!</h1>
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </form>
         </div>
 
-        <div class="groups-info">
-            <img class="study-img" src="{{ url_for('static', filename='img/class-img.jpg') }}" alt="bible-study-image">
-            <div class="study-info">
-                <h2>Learn and grow through<br><span>Classes</span></h2>
-                <p>Here at First Baptist, we provide many different classes,
-                so you can connect with others, learn more and grow as a 
-                believer. We provide classes for all ages at 8:45am on Sunday 
-                mornings. Belonging to a class helps you connect with other believers
-                who can be with you along the journey. 
-                </p>
-                <a class="view_groups" href="">View our classes</a>
-            </div>
-        </div>
-
-        <div class="serve-info">
-            <h2>Live to <span>Serve</span></h2>
-            <p>At First Baptist, there are many ways you can roll up 
-                your sleeves, serve others and build relationships. 
-                There are plenty of opportunities for you to get started.
-            </p>
-            <p class="serve-verse">Each of you should use whatever gift you have received to serve 
-                others. 1 Peter 4:10
-            </p>
-            <a class="view_groups" href="">View service opportunities</a>
-        </div>
 
         <div class="contact">
             <div class="church-name">
@@ -245,20 +213,21 @@
         </div>
     </main>
 
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-    
+
     <!-- 0. JQuery Cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
+
     <!-- 1. Owl Carousel Min .js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <script type="text/javascript" src="{{ url_for('static', filename='js/homepage.js') }}"></script>
 </body>
 </html>

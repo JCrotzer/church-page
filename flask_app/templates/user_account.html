@@ -41,10 +41,17 @@
                         <span class="categories-list">
                         <ul>
                             <li>
+                                <a href="/our_history/">Our History</a>
+                            </li>
+                            <li>
                                 <a href="/new_here/">New Here?</a>
                             </li>
-                            <li>What we believe</li>
-                            <li>Our Team</li>
+                            <li>
+                                <a href="https://bfm.sbc.net/bfm2000/">What we believe</a>
+                            </li>
+                            <li>
+                                <a href="/our_team/">Our Team</a>
+                            </li>
                             <li>Contact</li>
                         </ul>
                         </span>
@@ -85,9 +92,18 @@
                     <div class="mm-6column">
                         <span class="categories-list">
                         <ul>
-                            <li>New Here?</li>
-                            <li>What we believe</li> 
-                            <li>Meet Our Team</li>
+                            <li>
+                                <a href="/our_history/">Our History</a>
+                            </li>
+                            <li>
+                                <a href="/new_here/">New Here?</a>
+                            </li>
+                            <li>
+                                <a href="https://bfm.sbc.net/bfm2000/">What we believe</a>
+                            </li>
+                            <li>
+                                <a href="/our_team/">Our Team</a>
+                            </li>
                             <li>Contact</li>
                         </ul>
                         </span>
@@ -120,27 +136,45 @@
             </h1>
         </div>
         <div class="account-info">
-            <p>My First Baptist Account is where you can access information quickly. You can update your records, connect with other members, manage your online giving and so much more!</p>
+            <p>My First Baptist is your access to things you need quickly. Church Life is a web portal to our church database. It provides 
+                members with 24/7 access to their own profile information so they can update their records, connect with other members, manage 
+                your online giving and so much more!
+            </p>
+            <div class="app">
+                <img class="church-life-img" src="{{ url_for('static', filename='img/church-life.jpeg') }}" alt="church life app pic">
+                <div class="download-links">
+                    <a class="apple-link" href="http://itunes.apple.com/us/app/acs-church-life/id291375550?mt=8">Download for Iphone</a>
+                    <a class="android-link" href="http://play.google.com/store/apps/details?id=com.acstech.churchlife">Download for Android</a>
+                    <a class="other-signin" href="">For other devices</a>
+                </div>
+            </div>
+            <p>***You must first setup an account and log in at least once from the website before you will be able to use the ChurchLife mobile app.</p>
             <div class="account-links">
-                <a class="create-acct" href="">Create a FB account</a>
-                <a class="login-acct" href="">Login to my FB account</a>
+                <a class="create-acct" href="/user/signup">Create a Church Life Account</a>
+                <a class="login-acct" href="/user/login">Already have a Church Life Account</a>
             </div>
             <div class="account-benefits">
-                <h2>What can you do with FB Account?</h2>
+                <h2>What can you do with Church Life?</h2>
                 <ul>
                     <li><p>Update your information(address, email, phone number)</p></li>
                     <li><p>Check your records to make sure what we have on file is correct.</p></li>
                     <li><p>Find the church directory so you can connect with others</p></li>
-                    <li><p>Give online: Download the Church App for a convenient and secure way to give.</p></li>
+                    <li><p>Give online: This is a convenient and secure way to give.</p></li>
                 </ul>
             </div>
             <div class="signup-info">
                 <h2>How do I sign up?</h2>
                 <ul>
-                    <li><p>Create an account by clicking on the link above.</p></li>
-                    <li><p>We will verify you are in the church database. If you encounter problems, email the church office at <a href="">info@fbspringhill.com</a> to update your email address so you can log in. </p></li>
+                    <li><p>First, create a Church Life account by clicking on the link above.</p></li>
+                    <li><p>Church Life will verify you are in the church database and send you an email with a username and startup password. If you encounter problems, email the church office at <a href="">info@fbspringhill.com</a> to update your email address so you can log in. </p></li>
+                    <li><p>Use the username and password from the email to log in and create a permanent password. You will
+                        now be able to login and use Church Life anytime. 
+                        </p>
+                    </li>
                 </ul>
                 <p>This is a wonderful tool to help how we communicate to other members!</p>
+                <p>Watch this video, created by Church Life, for more information.</p>
+                <iframe class="elementor-video-iframe" allowfullscreen="" title="vimeo Video Player" src="https://player.vimeo.com/video/67730616?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t="></iframe>
             </div>
         </div>
 
@@ -189,8 +223,6 @@
                 </div>
             </div>
     </section>
-        
-</main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

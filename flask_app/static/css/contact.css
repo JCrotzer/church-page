@@ -6,26 +6,22 @@
     margin: 0;
 }
 
+/* body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
+} */
+
 body {
 	font-family:'Ubuntu', sans-serif;
 	color: #e5e5e5;
 	font-size: 12px;
 	line-height: 1;
-    text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
 *, *:before, *:after {
     box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .church-name {
@@ -76,7 +72,6 @@ header span {
 	max-width: 1200px;
 	width: 100%;
 }
-
     .container-lg:after, .container-lg:before {
 	content: "";
     height: 300px;
@@ -84,7 +79,7 @@ header span {
     clear : both;
 }
 
-nav.menu {
+nav.menu > {
 	background: coral;
 	position: relative;
 	min-height: 50px;
@@ -98,11 +93,12 @@ nav.menu {
 	color: #fff;
 	line-height: 60px;
 }
+
 .menu > ul li a, .xs-menu li a {
 	text-decoration: none;
 	color: #fff;
 	display:block;
-	padding: 0px 13px;
+	padding: 5px 13px;
 }
 
 .menu > ul li a:hover {
@@ -116,12 +112,15 @@ nav.menu {
 	background:#444 !important;
 	
 }
+
 .displaynone{
 	display: none;
 }
+
 .xs-menu-cont{
 display:none;
 }
+
 .xs-menu-cont > a {
     background: none repeat scroll 0 0 #ff7f50;
     border-radius: 3px;
@@ -134,6 +133,7 @@ display:none;
 }
 .xs-menu-cont > a:hover{
     cursor: pointer;
+    
 }
 
 .xs-menu li {
@@ -153,12 +153,40 @@ display:none;
     left: 45px;
     margin-top: 3px;
     position: absolute;
-    width: 80%;
-	padding:15px;
+    z-index: 5000;
+    width: 60%;
+    height: 40%;
+	padding: 20px;
 	display:none;
 	transition-duration: 0.9s;
-    
 }
+
+.mega-menu ul li {
+    width: 200px;
+    font-size: 18px;
+}
+
+nav.menu .mega-menu ul li a{
+    width: 200px;
+    height: 40px;
+    margin-top: -10px;
+    font-size: 22px;
+    background: none repeat scroll 0 0 #ff7f50;
+    border-radius: 3px;
+    z-index: 5000;
+    padding: 3px 6px;
+	display: block;
+    z-index: 5000;
+	border-bottom:1px solid white;
+	box-shadow: 0 1px 2px #e67248;
+	-webkit-box-shadow: 0 1px 2px #e67248;
+	-moz-box-shadow: 0 1px 2px #e67248;
+}
+
+nav.menu .mega-menu {
+    height: 40%;
+}
+
 #menutoggle i {
     color: #fff;
     font-size: 33px;
@@ -175,15 +203,18 @@ display:none;
 }
 
 .mm-6column, .mm-3column {
+    float: left;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
+
 .mm-6column {
     width: 50%;
     height: 100%;
 }
 .mm-3column {
-        width: 25%;
+    width: 25%;
+    height: 100%;
 }
 .responsive-img {
     display: block;
@@ -197,30 +228,16 @@ display:none;
     margin: 0;
     padding: 5px 0;
 }
-.categories-list li :hover {
+.categories-list li:hover {
 	background:inherit !important;
 }
-.left-images > p {
-    background: none repeat scroll 0 0 #ff7f50;
-    display: block;
-    font-size: 18px;
-    line-height: normal;
-    margin: 0;
-    padding: 5px 14px;
-}
+
 .categories-list span {
     font-size: 18px;
     padding-bottom: 5px;
     text-transform: uppercase;
 }
-.mm-view-more{
-	background: none repeat scroll 0 0 #ff7f50;
-    color: #fff;
-    display: inline !important;
-    line-height: normal;
-    padding: 5px 8px !important;
-	margin-top:10px;
-}
+
 .display-on{
     display:block;
     transition-duration: 0.9s;
@@ -231,6 +248,21 @@ display:none;
     font-family: FontAwesome;
     font-style: normal;
     margin-left: 5px;
+}
+
+.account-btn {
+    color: darkgray;
+    font-weight: 700;
+}
+
+/* a.account-btn {
+    text-align: center;
+    text-decoration: none;
+}  */
+
+.account:hover {
+    color: black;
+    font-weight:700;
 }
 
     /*MediaQuerys*/
@@ -246,7 +278,6 @@ display:none;
     display:block;
 }
 }
-
 
 /*Animation--*/
 
@@ -281,198 +312,49 @@ display:none;
     animation-name: fadeIn;
 }
 
-/* .account {
-    margin-top: 40px;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    border-radius: 24px; 
-    border: none;
-    font-weight: 700;
-    background-color: white;
-    color: coral;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 10px 0 0;
-}  */
-
-.account {
-    width: 125px;
-    height: 30px;
-    border-radius: 24px;
-    border: none;
-    background-color: darkgray;
-    color:#ff7f50;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-a.account {
-    text-align: center;
-    text-decoration: none;
-}
-
-.account:hover {
-    color: white;
-    font-weight:700;
-}
-
-
-.account-img {
+.contact-info {
+    background-color:#7ccecb;
     width: 100%;
-    height: 20%;
-    position: relative;
-}
-
-.account-wrapper {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.account-wrapper .img-title {
-    font-family: 'Allura', cursive;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    padding: 5rem 0;
-    width: 400px;
-}
-
-.img-title {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: white;
-    position: relative;
+}
+
+.contact-info h1 {
     text-align: center;
+    margin: 30px 0;
 }
 
-.account-info p {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    padding: 0 25px;
+.address {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.church-life-img {
-    height: 350px;
-}
-
-.app {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.apple-link, .android-link {
+.contact-info a {
     text-decoration: none;
     color:#E67248;
-    font-size: 18px;
     font-weight: 700;
-    gap: 30px;
 }
 
-.account-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contact-info p {
+    text-align: center;
+    line-height: 20px;
 }
 
-.create-acct, .login-acct {
-    width: 300px;
-    height: 50px;
-    background-color: #0BBAB3;
-    color: white;
+.contact-info h3 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hours {
     margin-bottom: 20px;
-    border-radius: 24px;
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.create-acct:hover, .login-acct:hover {
-    color: rgb(235, 137, 25);
-}
-
-.account-benefits {
-    text-align: start;
-    margin-top: 30px;
-    padding: 0 30px;
-}
-
-.account-benefits h2 {
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.account-benefits li {
-    text-align: start;
-    list-style: circle;
-    list-style-type: disc; 
-    margin: 0 -20px -30px 0;
-}
-
-.church-app {
-    text-decoration: none;
-}
-
-.signup-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 30px;
-}
-
-.signup-info h2 {
-    margin-top: 30px;
-    font-size: 32px;
-    text-transform: uppercase;
-}
-
-.signup-info li {
-    display: list-item;
-    text-align: start;
-    list-style: circle;
-    list-style-type: disc; 
-    margin: 0 -20px -30px 0;
-}
-
-.signup-info a {
-    vertical-align: baseline;
-    text-decoration: underline;
-    text-decoration-color:#0BBAB3; 
-    color: #0BBAB3;
-    align-self: flex-start;
-}
-
-.signup-info ul {
-    margin-bottom: -20px;
 }
 
 .contact {
     width: 100%;
     height: 100%;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -500,6 +382,8 @@ a.account {
     font-weight: normal;
 }
 
+
+
 .address {
     line-height: 25px;
     margin-top: 10px;
@@ -519,22 +403,16 @@ a.account {
 }
 
 
-
-
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    
-    .account-wrapper {
+
+    nav.menu > ul {
         width: 100%;
-    }
-
-    .account-img {
-        height: 20%;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-
-    .account-img {
-        height: 20%;
+        background: coral;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        min-height: 50px;
+        height: 100%;
+        width: 100%;
     }
 }

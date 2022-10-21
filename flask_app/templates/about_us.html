@@ -25,103 +25,124 @@
     <title>First Baptist Church - About Us</title>
 </head>
 <body>
-    <div class="container-lg">
-        <header>
-            <div style="text-align:center;margin-top:25px;font-weight:bold;text-decoration:none;">
-                <a class="navbar-brand" href="#">
-                    <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
-                    <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
-                </a>
-            </div>
-        </header>
-            
-            <div class="xs-menu-cont">
-            <a id="menutoggle"><i class="fa fa-align-justify"></i></a>
-                <nav class="xs-menu displaynone">
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="drop-down">
-                            <a href="#">About Us</a>
-                        <div class="mega-menu fadeIn animated">
-                            <div class="mm-6column">
-                                <span class="categories-list">
-                                <ul>
-                                    <li>
-                                        <a href="/new_here/">New Here?</a>
-                                    </li>
-                                    <li>What we believe</li>
-                                    <li>Our Team</li>
-                                    <li>Contact</li>
-                                </ul>
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">Ministries</a>
-                        </li>
-                        <li>
-                            <a href="#">Watch/Read</a>
-                        </li>
-                        <li>
-                            <a href="#">Events</a>
-                        </li>
-                        <li>
-                            <a href="#">Give</a>
-                        </li>
-                        <li>
-                            <a href="/users/account" class="account">
-                                My Account
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </nav>
-            </div>
-            <nav class="menu">
+    <div class="wrapper">
+        <nav class="xs-menu">
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+            <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                    stroke-linecap="butt" stroke-linejoin="arcs">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+                <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+                <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                            stroke-linecap="butt" stroke-linejoin="arcs">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </label>
+                    <span></span>
+                </div>
                 <ul>
+                    <li><label><a href="/">Home</a></label></li>
                     <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li class="drop-down">
-                        <a href="#">About Us</a>
-                    <div class="mega-menu fadeIn animated">
-                        <div class="mm-6column">
-                            <span class="categories-list">
+                        <label class="a-label__chevron" for="item-2">About Us</label>
+                        <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-2">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
                             <ul>
-                                <li>
-                                    <a href="/new_here/">New Here?</a>
-                                </li>
-                                <li>What we believe</li>
-                                <li>Meet Our Team</li>
-                                <li>Contact</li>
+                                <li><label><a href="/our_history/">Our History</a></label></li>
+                                <li><label><a href="/new_here/">New Here?</a></label></li>
+                                
+                                <li><label><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></label></li>
+                                <li><label><a href="/our_team/">Our Team</a></label></li>
+                                <li><label><a href="/contact">Contact</a></label></li>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="a-label__chevron" for="item-3">Ministries</label>
+                        <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-3">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li><label>Adults</label></li>
+                                <li><label>Youth(6th-12th)</label></li>
+                                <li><label>Kids</label></li>
+                                <li><label>Missions</label></li>
+                        </div>
+                    </li>
+                    <li><label>Watch/Read</label></li>
+                    <li><label>Events</label></li>
+                    <li><label>Give</label></li>
+                    <li><label>My Account</label></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="container">
+            <nav class="menu">
+                <div id="logo">
+                    <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+                </div>
+                <ul>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">About Us &nbsp;<i
+                                class="fa fa-caret-down"></i></a>
+                        <div class="dd">
+                            <div id="up_arrow"></div>
+                            <ul>
+                                <li><a href="/our_history/">Our History</a></li>
+                                <li><a href="/new_here/">New Here?</a></li>
+                                <li><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></li>
+                                <li><a href="/our_team/">Our Team</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
-                            </span>
-                        </div>
                         </div>
                     </li>
-                    <li>
-                        <a href="#">Ministries</a>
-                    </li>
-                    <li>
-                        <a href="#">Watch/Read</a>
-                    </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">Give</a>
-                    </li>
-                    <li>
-                        <a href="/users/account" class="account">
-                            My Account
-                        </a>
-                    </li>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">Ministries &nbsp;<i
+                        class="fa fa-caret-down"></i></a>
+                <div class="dd">
+                    <div id="up_arrow"></div>
+                    <ul>
+
+                        <li><a href="#">Adults</a></li>
+                        <li><a href="#">Youth(6th-12th)</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Missions</a></li>
+                    </ul>
+                </div>
+            </li>
+                    <li><a href="#">Watch/Read</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Give</a></li>
+                    <li><a href="#">My Account</a></li>
                 </ul>
             </nav>
         </div>
-
+    </div>
+    
     <main>
         <div class="history-info">
             <h2>A Brief History of First Baptist Church of Spring Hill</h2>
@@ -140,7 +161,7 @@
                 <li>Rev. Homer Kelly Nov. 12, 1967 – Mar. 15, 1987 During Bro. Homer’s leadership, the church built new facilities in our current location.</li>
                 <li>Dr. Bill Harbison Interim May 6, 1987 – Nov. 21, 1987</li>
                 <li>Rev. Amos Jarman Nov. 22, 1987 – Jan. 2, 2002 During Bro. Amos’s leadership, the church added on a new wing and brought adjoining property for future growth. After retiring, the church voted Bro. Amos Pastor Emeritus.</li>
-                <li>Dr. David Daugherty Aug. 4, 2002 –Oct. 31, 2003</li>
+                <li>Dr. David Daugherty Aug. 4, 2002 – Oct. 31, 2003</li>
                 <li>Rev. Jerry Price Interim May 2004 - May 2005 Bro. Jerry and Sis. Trish have joined our fellowship and remain faithfully serving members of the kingdom work here.</li>
                 <li>The church called our present Pastor Rev. J. C. Christian, Jr. who began his faithful service to our fellowship May 23, 2005 along side his gifted and lovely wife Patty.</li>
             </ul>
@@ -152,7 +173,7 @@
                 <li>Rev. Adam Dorsey Oct. 2004 and entered full time Seminary in New Orleans June 2005</li>
                 <li>Bro. Jason Hargrove Interim Part Time July 2005.</li>
                 <li>Josh Howland</li>
-                <li>Danny Brashiers September 13, 2022 - current</li>
+                <li>Danny Brashier September 13, 2022 - current</li>
             </ul>
 
             <p>Our Pastor Bro. J has a vision for our people and the mission field of Spring Hill. His vision includes reaching our community with the Gospel of the Lord Jesus Christ and seeing souls saved. As we grow it will be necessary that we enlarge our building, including a new worship center and educational space.  This vision will be accomplished as we all commit ourselves to growing in our knowledge of Christ, going out to the community with the Gospel, and giving cheerfully to the Lord for His honor and glory!</p>

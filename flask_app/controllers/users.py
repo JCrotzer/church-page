@@ -11,7 +11,7 @@ bcrypt = Bcrypt(app)
 def register_user():
 
     if not User.validate_register(request.form):
-        return redirect('/users/register')
+        return redirect('/user/signup')
     data = {
         "first_name": request.form['first_name'],
         "last_name": request.form['last_name'],
@@ -26,7 +26,7 @@ def login_user():
     this_user = User.read_by_email({"email": request.form['email']})
     if not this_user:
         flash("Invalid Email/Password")
-        return redirect('/')
+        return redirect('/user/login')
     if not bcrypt.check_password_hash(this_user.password, request.form['password']):
         flash("Invalid Email/Password")
         return redirect('/')
@@ -51,6 +51,26 @@ def visitor_page():
 def about_page():
     return render_template("about_us.html")
 
+@app.route('/our_team/')
+def our_team():
+    return render_template("our_team.html")
+
+@app.route('/user/signup')
+def user_signup():
+    return render_template("register_account.html")
+
+@app.route('/user/login')
+def user_login():
+    return render_template("login_account.html")
+
+@app.route('/contact')
+def contact_info():
+    return render_template("contact.html")
+
+@app.route('/example')
+def example():
+    return render_template("example.html")
+    
 @app.route('/user/logout')
 def logout():
     session.pop("user_id")

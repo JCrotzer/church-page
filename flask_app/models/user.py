@@ -73,7 +73,7 @@ class User:
         query = "SELECT * FROM users WHERE email = %(email)s;"
         results = connectToMySQL(User.db).query_db(query,{"email": user['email']})
         if len(results) > 0:
-            flash("Email already taken")
+            flash("Email already established")
             is_valid = False
         if not EMAIL_REGEX.match(user['email']):
             flash("Invalid email!")
