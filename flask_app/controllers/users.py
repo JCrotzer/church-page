@@ -67,9 +67,9 @@ def user_login():
 def contact_info():
     return render_template("contact.html")
 
-@app.route('/example')
-def example():
-    return render_template("example.html")
+@app.route('/adults')
+def adults_info():
+    return render_template("adults.html")
     
 @app.route('/user/logout')
 def logout():

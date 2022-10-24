@@ -27,120 +27,124 @@
 </head>
 
 <body>
-    <div class="container-lg">
-        <header>
-            <div style="text-align:center;margin-top:25px;font-weight:bold;text-decoration:none;">
-                <a class="navbar-brand" href="#">
-                    <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
-                    <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
-                </a>
-            </div>
-        </header>
-        
-        <div class="xs-menu-cont">
-        <a id="menutoggle"><i class="fa fa-align-justify"></i></a>
-            <nav class="xs-menu displaynone">
+    <div class="wrapper">
+        <nav class="xs-menu">
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+            <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                    stroke-linecap="butt" stroke-linejoin="arcs">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+                <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+                <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                            stroke-linecap="butt" stroke-linejoin="arcs">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </label>
+                    <span></span>
+                </div>
                 <ul>
+                    <li><label><a href="/">Home</a></label></li>
                     <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li class="drop-down">
-                        <a href="#">About Us</a>
-                    <div class="mega-menu fadeIn animated">
-                        <div class="mm-6column">
-                            <span class="categories-list">
+                        <label class="a-label__chevron" for="item-2">About Us</label>
+                        <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-2">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
                             <ul>
-                                <li>
-                                    <a href="/our_history/">Our History</a>
-                                </li>
-                                <li>
-                                    <a href="/new_here/">New Here?</a>
-                                </li>
-                                <li>
-                                    <a href="https://bfm.sbc.net/bfm2000/">What we believe</a>
-                                </li>
-                                <li>
-                                    <a href="/our_team/">Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">Contact</a>
-                                </li>
-                            </ul>
-                            </span>
+                                <li><label><a href="/our_history/">Our History</a></label></li>
+                                <li><label><a href="/new_here/">New Here?</a></label></li>
+                                
+                                <li><label><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></label></li>
+                                <li><label><a href="/our_team/">Our Team</a></label></li>
+                                <li><label><a href="/contact">Contact</a></label></li>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Ministries</a>
+                        <label class="a-label__chevron" for="item-3">Ministries</label>
+                        <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-3">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li><label><a href="/adults">Adults</a></label></li>
+                                <li><label>Youth(6th-12th)</label></li>
+                                <li><label>Kids</label></li>
+                                <li><label>Missions</label></li>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">Watch/Read</a>
-                    </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">Give</a>
-                    </li>
-                    <li>
-                        <a href="/users/account" class="account">
-                            My Account
-                        </a>
-                    </li>
+                    <li><label>Watch/Read</label></li>
+                    <li><label>Events</label></li>
+                    <li><label>Give</label></li>
+                    <li><label><a href="/users/account">My Account</a></label></li>
                 </ul>
-                
+            </div>
+        </nav>
+        <div id="container">
+            <nav class="menu">
+                <div id="logo">
+                    <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+                </div>
+                <ul>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">About Us &nbsp;<i
+                                class="fa fa-caret-down"></i></a>
+                        <div class="dd">
+                            <div id="up_arrow"></div>
+                            <ul>
+                                <li><a href="/our_history/">Our History</a></li>
+                                <li><a href="/new_here/">New Here?</a></li>
+                                <li><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></li>
+                                <li><a href="/our_team/">Our Team</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">Ministries &nbsp;<i
+                        class="fa fa-caret-down"></i></a>
+                <div class="dd">
+                    <div id="up_arrow"></div>
+                    <ul>
+
+                        <li><a href="/adults">Adults</a></li>
+                        <li><a href="#">Youth(6th-12th)</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Missions</a></li>
+                    </ul>
+                </div>
+            </li>
+                    <li><a href="#">Watch/Read</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Give</a></li>
+                    <li><a href="/users/account">My Account</a></li>
+                </ul>
             </nav>
         </div>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li class="drop-down">
-                    <a href="#">About Us</a>
-                <div class="mega-menu fadeIn animated">
-                    <div class="mm-6column">
-                        <span class="categories-list">
-                        <ul>
-                            <li>
-                                <a href="/our_history/">Our History</a>
-                            </li>
-                            <li>
-                                <a href="/new_here/">New Here?</a>
-                            </li>
-                            <li>
-                                <a href="https://bfm.sbc.net/bfm2000/">What we believe</a>
-                            </li>
-                            <li>
-                                <a href="/our_team/">Our Team</a>
-                            </li>
-                            <li>
-                                <a href="/contact">Contact</a>
-                            </li>
-                        </ul>
-                        </span>
-                    </div>
-                </div>
-                </li>
-                <li>
-                    <a href="#">Ministries</a>
-                </li>
-                <li>
-                    <a href="#">Watch/Read</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">Give</a>
-                </li>
-                <li>
-                    <a href="/users/account" class="account">
-                        My Account
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
     <section class="meet-team">
         <div class="title">
             <h2>Meet Our Team</h2>
@@ -220,7 +224,7 @@
                 <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
                     Spring Hill,TN 37174
                 </p>
-                <div class="account-login">
+                <div class="account">
                     <a href="/users/account" class="account">My Account</a>
                 </div>
             </div>

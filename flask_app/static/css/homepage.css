@@ -342,6 +342,11 @@ nav .m-menu__checkbox:checked~.m-menu {
     align-items: center;
 }
 
+.content span {
+    color:#082f54;
+    font-weight: 700;
+}
+
 .content button {
     width: 150px;
     height: 40px;
@@ -419,7 +424,7 @@ nav .m-menu__checkbox:checked~.m-menu {
 }
 
 .events-header h3 {
-    color: #0BBAB3;
+    color:#0BBAB3;
 }
 
 .card {
@@ -644,7 +649,7 @@ input {
 .account {
     width: 150px;
     height: 40px;
-    margin: 0 0 20px 20px;
+    margin: 0 0 20px 15px;
     border-radius: 24px;
     border: none;
     background-color:coral;
