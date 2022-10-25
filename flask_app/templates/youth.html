@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/adults.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/youth.css') }}">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Ms+Madi&family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -148,12 +148,72 @@
     
     <main>
         <div class="main-img">
-            <img class="youth-img" src="{{ url_for('static', filename='img/adult-ministry-img.jpg') }}" alt="Bible pic">
-            <h2>Adults</h2>
+            <img class="youth-img" src="{{ url_for('static', filename='img/youth1.jpg') }}" alt="Youth pic">
+            <h2>Youth</h2>
         </div>
         
-        
+        <div class="youth-info">
+            <h2>Welcome to First Baptist Youth!</h2>
+            <p>First Baptist Youth is a ministry for 6th-12th grade. Our purpose is to introduce youth to Jesus
+            Christ, equip them with a faith that works, and to live life on a mission for Jesus to go out into the 
+            mission field to share the gospel. We meet in the youth house next to the church! Come join us!
+            </p>
+            <div class="youth-times">
+                <p>Sunday Mornings<br> 8:45 AM</p>
+                <p>Sunday Nights<br> 6:00 PM</p>
+            </div>
+        </div>
+
+        <div class="youth-events">
+            <img class="youth-event-img" src="{{ url_for('static', filename='img/youth-event-bg.jpg') }}" alt="Event-banner">
+            <h2>Youth Events</h2>
+        </div>
+
+        <div class="youth-events-info">
+            <section class="costume-party">
+                <a href="">
+                    <div class="visual">
+                        <img class="costume-party-img" src="{{ url_for('static', filename='img/costume-party.jpg') }}" alt="Costume-party">
+                        <p class="img-text">Costume<br> Party</p>
+                    </div>
+                    <div class="text">
+                        <h1>Youth Costume<br> Party</h1>
+                        <time datetime="10/30/2022" class="costume-start">October 30, 2022</time>
+                        <p>Pizza and Fun!</p>
+                    </div>
+                </a>
+            </section>
+
+            <section class="christmas-party">
+                <a href="">
+                    <div class="visual">
+                        <img class="christmas-img" src="{{ url_for('static', filename='img/christmas-party.jpg') }}" alt="Christmas party">
+                        <p>Christmas<br> Party</p>
+                    </div>
+                    <div class="text">
+                        <h1>Youth Christmas Party</h1>
+                        <time datetime="12/11/2022" class="start">December 11, 2022</time>
+                    </div>
+                </a>
+            </section>
+
+            <section class="ski-event">
+                <a href="">
+                    <div class="visual">
+                        <img class="ski-event-img" src="{{ url_for('static', filename='img/skiing.jpg') }}" alt="Ski pic">
+                    </div>
+                    <div class="text">
+                        <h1>Ski trip!</h1>
+                        <time datetime="01/13/2022-01/16/2022" class="start">January 13-16, 2022</time>
+                    </div>
+                </a>
+            </section>
+
+            
+        </div>
     </main>
+
+
     <div class="contact">
         <div class="church-name">
             <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->

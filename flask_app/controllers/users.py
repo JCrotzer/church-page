@@ -70,6 +70,10 @@ def contact_info():
 @app.route('/adults')
 def adults_info():
     return render_template("adults.html")
+
+@app.route('/youth')
+def youth_info():
+    return render_template("youth.html")
     
 @app.route('/user/logout')
 def logout():
