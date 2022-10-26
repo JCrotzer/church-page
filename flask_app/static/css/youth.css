@@ -354,6 +354,11 @@ nav .m-menu__checkbox:checked~.m-menu {
     text-transform: uppercase;
 }
 
+.cores h2 {
+    color:#0BBAB3;
+    font-weight: 700;
+}
+
 .youth-times {
     font-weight: 700;
 }
@@ -476,8 +481,85 @@ nav .m-menu__checkbox:checked~.m-menu {
     justify-content: center;
 }
 
+.youth-info-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
 
+.youth-info-links h2 {
+    text-transform: uppercase;
+}
 
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.links a {
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    background-color:#0BBAB3;
+    padding: 10px;
+    color: coral;
+    font-weight: 700;
+    
+}
+
+.links a:hover {
+    color: black;
+    
+}
+
+.children-img {
+    width: 100%;
+    height: 350px;
+}
+
+.little-lambs, .tigers, .monkeys, .rhinos, .elementary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px auto;
+    
+}
+
+.lamb-img, .tiger-img, .monkey-img, .rhino-img, .elementary-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.info {
+    width: 200px;
+    font-size: 24px;
+    color: #0BBAB3;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.elementary-info {
+    padding: 30px;
+    font-size: 24px;
+}
+
+.childrens-church h2 {
+    margin: 50px 25px 0 20px;
+    border-bottom: 1px solid black;
+}
+.childrens-church p{
+    margin: 20px 25px;
+    font-size: 24px;
+    color: #0BBAB3;
+}
 
 .contact {
     width: 100%;

@@ -74,6 +74,26 @@ def adults_info():
 @app.route('/youth')
 def youth_info():
     return render_template("youth.html")
+
+@app.route('/events/costume-party')
+def costume_event():
+    return render_template("costume_party.html")
+
+@app.route('/events/christmas-party')
+def christmas_party():
+    return render_template("christmas_party.html")
+
+@app.route('/events/ski-trip')
+def ski_trip():
+    return render_template("ski_trip.html")
+
+@app.route('/children')
+def children_info():
+    return render_template("children.html")
+
+@app.route('/missions')
+def missions_info():
+    return render_template("missions.html")
     
 @app.route('/user/logout')
 def logout():

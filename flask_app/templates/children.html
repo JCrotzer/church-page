@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/youth.css') }}">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Ms+Madi&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- 1. Owl Carousel Min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 2. Owl Carousel Theme Min.css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://use.fontawesome.com/add85f306e.js"></script>
+    <title>First Baptist Church Homepage</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="xs-menu">
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+            <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                    stroke-linecap="butt" stroke-linejoin="arcs">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+                <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+                <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                            stroke-linecap="butt" stroke-linejoin="arcs">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </label>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><label><a href="/">Home</a></label></li>
+                    <li>
+                        <label class="a-label__chevron" for="item-2">About Us</label>
+                        <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-2">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li><label><a href="/our_history/">Our History</a></label></li>
+                                <li><label><a href="/new_here/">New Here?</a></label></li>
+                                
+                                <li><label><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></label></li>
+                                <li><label><a href="/our_team/">Our Team</a></label></li>
+                                <li><label><a href="/contact">Contact</a></label></li>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="a-label__chevron" for="item-3">Ministries</label>
+                        <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-3">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li><label><a href="/adults">Adults</a></label></li>
+                                <li><label><a href="/youth">Youth(6th-12th)</a></label></li>
+                                <li><label>Kids</label></li>
+                                <li><label>Missions</label></li>
+                        </div>
+                    </li>
+                    <li><label>Watch/Read</label></li>
+                    <li><label>Events</label></li>
+                    <li><label>Give</label></li>
+                    <li><label><a href="/users/account">My Account</a></label></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="container">
+            <nav class="menu">
+                <div id="logo">
+                    <h2 class="church-name">First Baptist Church</br><span>of Spring Hill</span></h2>
+                </div>
+                <ul>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">About Us &nbsp;<i
+                                class="fa fa-caret-down"></i></a>
+                        <div class="dd">
+                            <div id="up_arrow"></div>
+                            <ul>
+                                <li><a href="/our_history/">Our History</a></li>
+                                <li><a href="/new_here/">New Here?</a></li>
+                                <li><a href="https://bfm.sbc.net/bfm2000/">What we believe</a></li>
+                                <li><a href="/our_team/">Our Team</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">Ministries &nbsp;<i
+                        class="fa fa-caret-down"></i></a>
+                <div class="dd">
+                    <div id="up_arrow"></div>
+                    <ul>
+
+                        <li><a href="/adults">Adults</a></li>
+                        <li><a href="/youth">Youth(6th-12th)</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Missions</a></li>
+                    </ul>
+                </div>
+            </li>
+                    <li><a href="#">Watch/Read</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Give</a></li>
+                    <li><a href="/users/account">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <main>
+        <div class="main-img">
+            <img class="children-img" src="{{ url_for('static', filename='img/children.jpg') }}" alt="Children pic">
+            <h2>Kids</h2>
+        </div>
+
+        <div class="elementary-info">
+            <p>Our Preschool environment is created for birth through Preschool and they meet upstairs at 8:45am</p>
+            <p>Our Kindergarten through 5th grade meet downstairs at 8:45am</p>
+            <p>It is our goal to create a fun, hands-on approach to learning</p>
+            <p>We want kids to learn:
+            <li>God made me.</li>
+            <li>God loves me.</li>
+            <li>Jesus wants to be my friend forever.</li>
+        </div>
+
+        <div class="little-lambs">
+            <img class="lamb-img" src="{{ url_for('static', filename='img/little-lambs.jpg') }}" alt="Lamb pic">
+            <p class="info">Lambs<br>Birth - 1 yr</p>
+        </div>
+        <div class="tigers">
+            <img class="tiger-img" src="{{ url_for('static', filename='img/tigers.jpg') }}" alt="Tiger pic">
+            <p class="info">Tigers<br>1-2 years</p>
+        </div>
+        <div class="monkeys">
+            <img class="monkey-img" src="{{ url_for('static', filename='img/monkeys.jpg') }}" alt="Monkey pic">
+            <p class="info">Monkeys<br>2-3 years</p>
+        </div>
+        <div class="rhinos">
+            <img class="rhino-img" src="{{ url_for('static', filename='img/rhinos.jpg') }}" alt="Rhino pic">
+            <p class="info">Rhinos<br>3-4 years</p>
+        </div>
+        <div class="elementary">
+            <img class="elementary-img" src="{{ url_for('static', filename='img/elementary.jpg') }}" alt="Elementary grade pic">
+            <p class="info">Kindergarten-5th grade</p>
+        </div>
+
+        <div class="childrens-church">
+            <h2>Childrens Church</h2>
+            <p>Childrens church is for Kindergarten-5th grade during church service in the recess hall. Your child experiences worship through music,
+                video, storytelling, scripture and games.</p>
+        </div>
+    </main>
+    <div class="contact">
+        <div class="church-name">
+            <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+            <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
+        </div>
+
+        <div class="address">
+            <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
+                Spring Hill,TN 37174
+            </p>
+            <div class="account">
+                <a href="/users/account" class="account">My Account</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="our-church">
+                <h2>Our Church</h2>
+                <p>Times & Locations<br>
+                Calendar<br>
+                Contact Us</p>
+            </div>
+
+            <div class="next-steps">
+                <h2>Next Steps</h2>
+                <p>Baptism<br>
+                Join our church<br>
+                Serving<br>
+                Missions</p>
+            </div>
+
+            <div class="get-connected">
+                <h2>Get Connected</h2>
+                <p>LifeGroups<br>
+                Children<br>
+                Students</p>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="{{ url_for('static', filename='img/png/002-facebook.png') }}" alt="facebook-icon">
+            <img src="{{ url_for('static', filename='img/png/001-instagram.png') }}" alt="Instagram-icon">
+            <img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon">
+        </div>
+    </div>
+<!-- </main> -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+<!-- 0. JQuery Cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- 1. Owl Carousel Min .js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+</body>
+
+</html>

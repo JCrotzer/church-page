@@ -497,6 +497,61 @@ nav .m-menu__checkbox:checked~.m-menu {
     font-size: 24px;
 }
 
+.missions-img {
+    width: 100%;
+    height: 350px;
+}
+
+.main-img h2 {
+    text-align: center;
+}
+
+.mission-info {
+    margin: 50px auto;
+    padding: 0 25px;
+    text-align: center;
+    
+}
+
+.mission-verse {
+    font-size: 22px;
+    color:#082f54;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.christmas-backpacks-img {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.local {
+    border-bottom: 1px solid black;
+}
+
+.local-outreach {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.local-outreach h2 {
+    font-size: 28px;
+}
+
+.local-outreach-link {
+    text-decoration: none;
+}
+
+.well-outreach-img {
+    width: 200px;
+    height: 100px;
+    align-self: flex-start;
+}
+
 .contact {
     width: 100%;
     height: 100%;
