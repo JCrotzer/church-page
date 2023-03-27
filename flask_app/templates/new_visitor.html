@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/new_visitor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/homepage.css') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Ms+Madi&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet">
@@ -89,16 +89,17 @@
                                 <span></span>
                             </div>
                             <ul>
-                                <li><label><a href="/adults">Adults</a></label></li>
-                                <li><label>Youth(6th-12th)</label></li>
-                                <li><label>Kids</label></li>
-                                <li><label>Missions</label></li>
+                                <li><a href="/adults">Adults</a></li>
+                                <li><a href="/youth">Youth(6th-12th)</a></li>
+                                <li><a href="/children">Kids</a></li>
+                                <li><a href="/missions">Missions</a></li>
+                            </ul>
                         </div>
                     </li>
-                    <li><label>Watch/Read</label></li>
-                    <li><label>Events</label></li>
-                    <li><label>Give</label></li>
-                    <li><label><a href="/users/account">My Account</a></label></li>
+                    <li><a href="/watch_listen/">Watch/Read</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/give">Give</a></li>
+                    <li><a href="/users/account">My Account</a></li>
                 </ul>
             </div>
         </nav>
@@ -126,19 +127,18 @@
                 <div class="dd">
                     <div id="up_arrow"></div>
                     <ul>
-
                         <li><a href="/adults">Adults</a></li>
-                        <li><a href="#">Youth(6th-12th)</a></li>
-                        <li><a href="#">Kids</a></li>
-                        <li><a href="#">Missions</a></li>
+                        <li><a href="/youth">Youth(6th-12th)</a></li>
+                        <li><a href="/children">Kids</a></li>
+                        <li><a href="/missions">Missions</a></li>
                     </ul>
                 </div>
             </li>
-                    <li><a href="#">Watch/Read</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Give</a></li>
-                    <li><a href="/users/account">My Account</a></li>
-                </ul>
+                <li><a href="/watch_listen/">Watch/Read</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/give">Give</a></li>
+                <li><a href="/users/account">My Account</a></li>
+            </ul>
             </nav>
         </div>
     </div>
@@ -176,7 +176,7 @@
                 and even minister to others. Click the link below to see what
                 groups are meeting at this time. 
             </p>
-            <a class="view_groups" href="">Find a group</a>
+            <a class="view_groups" href="/bible_studies">Find a group</a>
         </div>
 
         <div class="groups-info">
@@ -189,7 +189,7 @@
                 mornings. Belonging to a class helps you connect with other believers
                 who can be with you along the journey. 
                 </p>
-                <a class="view_groups" href="">View our classes</a>
+                <a class="view_groups" href="/adults">View our classes</a>
             </div>
         </div>
 
@@ -202,50 +202,52 @@
             <p class="serve-verse">Each of you should use whatever gift you have received to serve 
                 others. 1 Peter 4:10
             </p>
-            <a class="view_groups" href="">View service opportunities</a>
+            <a class="view_groups" href="/missions">View service opportunities</a>
         </div>
 
         <div class="contact">
-            <div class="church-name">
-                <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
-                <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
-            </div>
-
-            <div class="address">
-                <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
-                    Spring Hill,TN 37174
-                </p>
-                <div class="account">
-                    <a href="/users/account" class="account">My Account</a>
+            <div class="church-info">
+                <div class="church-name">
+                    <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+                    <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
+                </div>
+    
+                <div class="address">
+                    <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
+                        Spring Hill,TN 37174
+                    </p>
+                    <div class="account">
+                        <a href="/users/account" class="account">My Account</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-info">
                 <div class="our-church">
-                    <h2>Our Church</h2>
-                    <p>Times & Locations<br>
-                    Calendar<br>
-                    Contact Us</p>
+                    <h3>Our Church</h3>
+                    <a href="/#service-info"><p>Times & Locations</p></a>
+                    <a href="/events"><p>Calendar</p></a>
+                    <a href="/contact"><p>Contact Us</p></a>
                 </div>
-
+    
                 <div class="next-steps">
-                    <h2>Next Steps</h2>
-                    <p>Baptism<br>
-                    Join our church<br>
-                    Serving<br>
-                    Missions</p>
+                    <h3>Next Steps</h3>
+                    <a href=""><p>Baptism</p></a>
+                    <a href=""><p>Join our church</p></a>
+                    <a href=""><p>Serving</p></a>
+                    <a href="/missions"><p>Missions</p></a>
                 </div>
-
+    
                 <div class="get-connected">
-                    <h2>Get Connected</h2>
-                    <p>LifeGroups<br>
-                    Children<br>
-                    Students</p>
+                    <h3>Get Connected</h3>
+                    <a href="/adults"><p>LifeGroups</p></a>
+                    <a href="/children"><p>Children</p></a>
+                    <a href="/youth"><p>Students</p></a>
                 </div>
             </div>
             <div class="icons">
-                <img src="{{ url_for('static', filename='img/png/002-facebook.png') }}" alt="facebook-icon">
-                <img src="{{ url_for('static', filename='img/png/001-instagram.png') }}" alt="Instagram-icon">
-                <img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon">
+                <a href="https://www.facebook.com/profile.php?id=100064722064699"><img src="{{ url_for('static', filename='img/png/002-facebook.png') }}" alt="facebook-icon"></a>
+                <a href=""><img src="{{ url_for('static', filename='img/png/001-instagram.png') }}" alt="Instagram-icon"></a>
+                <a href="https://www.youtube.com/@fbcspringhill4877"><img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon"></a>
             </div>
         </div>
     </main>

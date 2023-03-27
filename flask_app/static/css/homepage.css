@@ -1,3 +1,5 @@
+/* ****Global**** */
+
 *, 
 *::before,
 *::after {
@@ -12,7 +14,7 @@ body {
     overflow-x: hidden;
     font-family: 'Ubuntu',sans-serif;
 }
-
+/* Navbar */
 .church-name {
     color: #082f54;
     font-size: 32px;
@@ -43,6 +45,7 @@ nav {
     /* fade in checked menu */
 }
 
+/* Hamburger Menu */
 nav .m-menu__checkbox {
     display: none;
 }
@@ -186,6 +189,150 @@ nav .m-menu__checkbox:checked~.m-menu {
     overflow: hidden;
 }
 
+/* Navbar menu extended */
+
+@media screen and (min-width: 950px) {
+
+    #logo .church-name {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        font-weight: 700;
+        font-family: 'Allura', cursive;
+        text-align: start;
+        line-height: 20px;
+        margin: 0 50px 0 20px;
+        padding-top: 5px;
+    } 
+
+    .xs-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #container > nav > .menu {
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #container {
+        width: 100%;
+        height: 80px;
+        margin: 0 auto;
+        box-shadow: -2px -2px 5px white, 2px -2px 5px white;
+    }
+
+    #container>nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        max-height: 80px;
+    }
+
+    #container>nav>ul {
+        max-width: 600px;
+        margin: 0 10px 0 30px;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: no-wrap;
+        justify-content: flex-end;
+        /* gap: 5px; */
+        position: absolute;
+        z-index: 5000;
+        right: -10px;
+        min-width:60%;
+    }
+
+    #container>nav>ul>li {
+        line-height: 60px;
+        margin: 0 0px;
+        padding: 0;
+        text-align: center;
+        display: inline-block;
+        min-width: 120px;
+
+    }
+
+    #container>nav>ul>li>a {
+        position: relative;
+        margin: 0 10px;
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    #container>nav>ul>li:hover {
+        border-bottom: 2px solid white;
+        background-color: #082f54;
+    }
+
+    #container>nav>ul>.dropdown:hover {
+        border-bottom: none;
+    }
+
+    #container>nav>ul>.dropdown:hover>.dd {
+        display: block;
+    }
+
+    .dropdown:hover>a .fa-caret-down {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #container>nav>ul>li>div {
+        position: absolute;
+        padding: 0 10px;
+        background-color: black;
+        display: none;
+        background-color: lightgrey;
+        min-width: 200px;
+    }
+
+    #container>nav>ul>li>div>ul {
+        margin: 0px 0 10px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #u_a_c {
+        position: relative;
+        width: 100%;
+    }
+
+    #up_arrow {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        left: 42%;
+        top: -10px;
+        background-color: lightgray;
+        transform: rotate(45deg);
+    }
+
+    #container>nav>ul>li>div>ul>li:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    #container>nav>ul>li>div>ul>li>a {
+        padding: 5px;
+        color: black;
+    }
+}
+
+/* Homepage Mobile*/
 .showcase {
     position: relative;
 }
@@ -302,7 +449,7 @@ nav .m-menu__checkbox:checked~.m-menu {
     margin-top: 2.5rem;
     font-size: 6rem;
     width: 120%;
-    font-family: 'Ms Madi', cursive;
+    font-family: 'Splash', cursive;
     font-style: normal;
     font-weight: 400;
 }
@@ -326,7 +473,7 @@ nav .m-menu__checkbox:checked~.m-menu {
 }
 
 .content h1 {
-    margin: 30px auto;
+    /* margin-top: -90px; */
     text-align: center;
     line-height: 40px;
 }
@@ -340,11 +487,18 @@ nav .m-menu__checkbox:checked~.m-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 50px 30px;
 }
 
 .content span {
     color:#082f54;
     font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    text-align: center;
 }
 
 .content button {
@@ -353,10 +507,14 @@ nav .m-menu__checkbox:checked~.m-menu {
     background-color: coral;
     border-radius: 24px;
     border: none;
-    color: white;
-    font-weight: 700;
     text-transform: uppercase;
     margin-top: 20px;
+}
+
+.new-here-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
 }
 
 .about .service {
@@ -372,7 +530,6 @@ nav .m-menu__checkbox:checked~.m-menu {
     flex-direction: column;
     transition: all 0.4s ease;
 }
-
 
 .service h2 {
     font-size: 38px;
@@ -395,6 +552,10 @@ nav .m-menu__checkbox:checked~.m-menu {
     margin-top: 60px;
     text-align: left;
     font-weight: 700;
+}
+
+.bible-verse .verse {
+    display: none;
 }
 
 .container-fluid {
@@ -428,7 +589,7 @@ nav .m-menu__checkbox:checked~.m-menu {
 }
 
 .card {
-    width: 450px;
+    width: 350px;
     height: 485px;
     margin-bottom: 50px;
     padding-bottom: 20px;
@@ -458,6 +619,7 @@ nav .m-menu__checkbox:checked~.m-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .card-body h3 {
@@ -517,6 +679,11 @@ nav .m-menu__checkbox:checked~.m-menu {
     margin-bottom: 110px;
 }
 
+.event-footer a {
+    text-decoration: none;
+    color: coral;
+}
+
 .event-footer {
     width: 100%;
     display: flex;
@@ -560,36 +727,38 @@ nav .m-menu__checkbox:checked~.m-menu {
 }
 
 iframe {
-    margin: 30px 0px;
-    width: 70%;
-    padding: 0 50px 0 0;
+    margin: 30px 50px;
+    width: 90%;
+    padding: 0 50px 50px 0;
 }
 
-.showcase .newsletter {
+.newsletter {
     width: 100%;
     height: 500px;
     background-color: #0BBAB3;
     color: white;
-    margin: 40px 5px 0px 5px;
+    margin: 40px 5px 0px 0px;
     text-align: left;
     border-radius: 2px;
-    padding: 80px 0 0 50px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     transform: translateY(-2.5rem);
     transition: all 0.4s ease;
 }
 
 .newsletter h2 {
-    text-align: center;
-    margin: 50px 40px 30px 0; 
+    text-align: flex-start;
+    margin: 50px 40px 30px 25px; 
     letter-spacing: 2px;
 }
 
 .first-name, .last-name, .email {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 0 20px 20px;
 }
 
@@ -610,10 +779,1150 @@ input {
     font-weight: 700;
 }
 
+/* About Page/Mobile */
+
+.history-info {
+    padding: 0 30px 50px 30px;
+}
+
+main {
+    margin: 50px auto;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.old-church-pic {
+    width: 100%;
+    height: 650px;
+}
+
+main ul li {
+    list-style: disc;
+    color: darkgray;
+    font-weight: 700;
+}
+
+/* Adult page-Mobile */
+
+.adult-img {
+    width: 100%;
+    height: 250px;
+    margin-top: -50px;
+} 
+
+.adult-text {
+    margin-top: -160px;
+    font-size: 42px;
+    color: white;
+}
+
+.adult-content {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px 20px 20px;
+}
+
+.adult-content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.adult-groups {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.adult-groups-part1 img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.adult-groups-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    text-align: center;
+}
+
+.adult-groups-part2 img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.adult-groups-part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.bible-studies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.bible-studies img {
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.bible-studies p {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.bible-studies a {
+    background-color:#85b7a0;
+    color: coral;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.young-adult {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.young-adult img {
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.young-adult a {
+    background-color:#85b7a0;
+    color: coral;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.young-adult p {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.womens-ministry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.womens-ministry img {
+    height: 300px;
+    margin: 50px 0 30px 0;
+    border-radius: 10px;
+}
+
+.womens-ministry a {
+    background-color:#85b7a0;
+    color: coral;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.womens-ministry p {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.mens-ministry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mens-ministry img {
+    height: 300px;
+    margin: 50px 0 30px 0;
+    border-radius: 10px;
+}
+
+.mens-ministry a {
+    background-color:#85b7a0;
+    color: coral;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.mens-ministry p {
+    margin-top: 30px;
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+
+/* Missions Page Mobile */
+
+.missions-main-img img {
+    width: 100%;
+    height: 250px;
+    margin-top: -50px;
+}
+
+.missions-main-img h2 {
+    text-align: center;
+    padding-top: 50px;
+    margin-top: -200px;
+    color: white;
+    font-size: 32px;
+}
+
+.mission-info {
+    margin: 150px auto;
+    padding: 0 25px;
+    text-align: center;
+    
+}
+
+.mission-verse {
+    font-size: 22px;
+    color:#082f54;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.christmas-backpacks-img {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.local {
+    border-bottom: 1px solid black;
+}
+
+.local-outreach {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.local-outreach h2 {
+    font-size: 28px;
+}
+
+.local-outreach-link {
+    text-decoration: none;
+}
+
+.well-outreach-img {
+    width: 200px;
+    height: 100px;
+    align-self: flex-start;
+}
+
+.bible-groups img {
+    width: 100%;
+    height: 300px;
+}
+
+.bible-groups a {
+    background-color:#85b7a0;
+    color: coral;
+    padding: 15px;
+    text-decoration: none;
+    margin: 50px 130px 30px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bible-groups p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.bible-group-info h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bible-study-event {
+    margin: 20px 0 30px 50px;
+}
+
+/* Youth/Children Mobile */
+
+.youth-info {
+    text-align: center;
+    padding: 30px 30px 50px 30px;
+    background-color: lightgray;
+    margin-top: -30px;
+}
+
+.youth-info h2 {
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.cores h2 {
+    color:#0BBAB3;
+    font-weight: 700;
+}
+
+.youth-times {
+    font-weight: 700;
+}
+
+.youth-events {
+    width: 100%;
+}
+
+.youth-events-info {
+    padding: 30px auto;
+    margin-top: 100px;
+}
+
+.youth-events img {
+    width: 100%;
+    height: 150px;
+}
+
+.youth-events h2 {
+    margin-top: -110px;
+    font-size: 42px;
+    color: white;
+    text-transform:uppercase;
+    border-bottom: 1px solid white;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.costume-party a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-decoration: none;
+    color: coral;
+}
+
+.costume-party-sm, .ski-event-sm, .christmas-sm {
+    height: 100px;
+    width: 150px;
+    position: relative;
+}
+
+.costume-party a:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.christmas-party a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-decoration: none;
+    color: coral;
+}
+
+.visual p {
+    position: absolute;
+    margin: -70px 0 0 10px;
+    text-align: center;
+}
+
+.christmas-party a:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.text h1 {
+    font-size: 24px;
+    text-align: center;
+} 
+
+.text p {
+    text-align: center;
+} 
+
+.ski-event {
+    margin-top: 20px;
+}
+
+.ski-event a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-decoration: none;
+    color: coral;
+}
+
+.ski-event a:hover {
+    color: coral;
+}
+
+.text {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.youth-info-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.youth-info-links h2 {
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 30px 0 20px 0;
+}
+
+.links a {
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    background-color:#0BBAB3;
+    padding: 10px;
+    color: coral;
+    font-weight: 700;
+    
+}
+
+.links a:hover {
+    color: black;
+    
+}
+
+/* Children Page Mobile */
+
+.kids-main-video {
+    width: 100%;
+    height: 250px;
+    margin-top: -80px;
+}
+
+.little-lambs, .tigers, .monkeys, .rhinos, .elementary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px auto;
+    
+}
+
+.lamb-img, .tiger-img, .monkey-img, .rhino-img, .elementary-img {
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.info {
+    width: 200px;
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.elementary-info {
+    padding: 0px 30px 50px 30px;
+    font-size: 24px;
+}
+
+.elementary-classes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.childrens-church h2 {
+    margin: 50px 25px 0 20px;
+    border-bottom: 1px solid black;
+}
+.childrens-church p{
+    margin: 30px 25px 70px 25px;
+    font-size: 24px;
+    color: #0BBAB3;
+}
+
+/* Events Page */
+
+.header {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 22px;
+}
+.costume-party-img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    margin: -300px 0 0 30px;
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+.party-info {
+    position: absolute;
+    margin: -150px 0 0 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}
+
+.costume-party-info {
+    font-size: 24px;
+    padding: 30px 20px;
+    color: orange;
+}
+
+.christmas-party-info {
+    font-size: 24px;
+    padding: 30px 20px;
+    color: red;
+}
+
+.ski-trip-img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.ski-trip-info {
+    font-size: 24px;
+    padding: 30px 20px;
+    color: blue;
+}
+
+.christmas-party-img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+
+.container p {
+    font-size: 28px;
+}
+
+/* Events Page Mobile */
+
+.event-img {
+    width: 100%;
+    height: 250px;
+    margin-top: -50px;
+}
+
+.event-img-text {
+    font-size: 42px;
+    letter-spacing: 3px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: -160px;
+}
+
+.events-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 100px;
+    margin: 70px 100px;
+}
+
+.events-info li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+
+.event-text {
+    font-size: 20px;
+    text-align: center;
+    color: coral;
+}
+
+.event-image {
+    width: 200px;
+    height: 150px;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+/* Give Page-Mobile */
+.give-img {
+    width: 100%;
+    height: 250px;
+    margin-top: -50px;
+}
+
+.give-img-text {
+    font-size: 42px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: -160px;
+}
+
+.give-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px;
+}
+
+.give-info h2 {
+    text-align: center;
+    font-size: 32px;
+    color:#85b7a0;
+}
+
+.giving {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.giving a{
+    text-decoration: none;
+    color: coral;
+    font-weight: 700;
+}
+
+.serving {
+    margin-top: 50px;
+}
+
+.serving a {
+    text-decoration: none;
+    color: coral;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Contact Page */
+
+.contact-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.contact-info h1 {
+    text-align: center;
+}
+
+.address {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color:#E67248;
+    font-weight: 700;
+}
+
+.contact-info p {
+    text-align: center;
+    line-height: 20px;
+}
+
+.contact-info h3 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hours {
+    margin-bottom: 20px;
+}
+
+/* New Visitor Page-Mobile */
+.journey-wrapper {
+    position: relative;
+    margin-top: -50px;
+}
+
+.journey-img {
+    width: 100%;
+    height: 300px;
+}
+
+.journey-text {
+    position: absolute;
+    top: 80px;
+    left: 230px;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.journey-text span {
+    font-size: 24px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    background-color:#0BBAB3;
+    color: white;
+}
+
+.message {
+    width: 100%;
+    padding: 30px 50px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.message h2 {
+    text-transform: uppercase;
+    color: black;
+}
+
+.message2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.starting-img {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+}
+
+.starting-text {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    top: 70px;
+    color:#e67248; 
+}
+
+.starting-info {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    padding: 0 30px;
+    line-height: 25px;
+}
+
+.small-groups {
+    width: 100%;
+    margin-top: 220px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.small-groups h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.small-groups span {
+    color:#E67248;
+}
+
+.small-groups a{
+    position: relative;
+    text-decoration: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color:#E67248;
+    color: black;
+    font-weight: 700;
+}
+
+.small-groups p {
+    margin-bottom: 30px;
+}
+
+.small-groups a:hover {
+    color:#0BBAB3;
+}
+
+.groups-info {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.study-img {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.study-info {
+    position: relative;
+    margin-top: -340px;
+    padding: 0 25px;
+}
+
+.study-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.study-info p {
+    position: relative;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.study-info span {
+    color:#e67248;
+    text-transform: uppercase;
+}
+
+.groups-info a{
+    position: relative;
+    text-decoration: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color:#E67248;
+    color: black;
+    font-weight: 700;
+}
+
+.groups-info a:hover {
+    color:#0BBAB3;
+}
+
+.serve-info {
+    width: 100%;
+    margin: 100px auto;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.serve-info h2 {
+    font-size: 32px;
+}
+
+.serve-info span {
+    color:#e67248;
+    text-transform: uppercase;
+}
+
+.serve-verse {
+    color:#0BBAB3;
+    font-weight: 700;
+    margin: 30px auto;
+}
+
+.serve-info a{
+    position: relative;
+    text-decoration: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color:#E67248;
+    color: black;
+    font-weight: 700;
+}
+
+.serve-info a:hover {
+    color:#0BBAB3;
+}
+
+/* Our Team Page-Mobile */
+
+.meet-team h2 {
+    text-align: center;
+    font-size: 46px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.senior-pastor, .student-pastor, .worship-leader, .ministry-assistant {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.ministry-assistant {
+    border:none;
+    padding-bottom: 50px;
+}
+
+.senior-pastor-img, .student-pastor-img, .worship-leader-img, .ministry-assistant-img {
+    margin-bottom: 20px;
+}
+
+.senior-pastor-info, .student-pastor-info, .worship-leader-info, .ministry-assistant-info{
+    text-align: center;
+    margin: 0 auto;
+}
+
+address a {
+    text-decoration: none;
+    color:#E67248;
+    font-weight: 700;
+}
+
+/* User Account-Mobile */
+
+.user-account-img {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    margin-top: -50px;
+}
+
+.account-wrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-wrapper .img-title {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 5rem 0;
+    width: 400px;
+}
+
+.img-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+
+.account-info p {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    text-align: start;
+    margin: 50px auto; 
+    padding: 0 50px;
+}
+
+.church-life-img {
+    height: 350px;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.apple-link, .android-link {
+    text-decoration: none;
+    color:#E67248;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 30px;
+}
+
+.account-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-acct, .login-acct {
+    width: 300px;
+    height: 50px;
+    background-color: #0BBAB3;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.create-acct:hover, .login-acct:hover {
+    color: rgb(235, 137, 25);
+}
+
+.account-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.account-benefits h2 {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+li .app-info {
+    list-style: circle;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+}
+
+.church-app {
+    text-decoration: none;
+}
+
+.signup-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.signup-info h2 {
+    margin-top: 30px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+li .sign-up-info {
+    list-style: circle;
+    list-style-type: disc; 
+    margin: 0;
+    padding: 0;
+}
+
+.signup-info a {
+    vertical-align: baseline;
+    text-decoration: underline;
+    text-decoration-color:#0BBAB3; 
+    color: #0BBAB3;
+    align-self: flex-start;
+}
+
+.signup-info p {
+    text-align: start;
+}
+
+.signup-info ul {
+    margin-bottom: -20px;
+}
+
+.church-life-video {
+    padding: 0 30px;
+}
+
+.elementor-video-iframe {
+    width: 400px;
+    height: 300px;
+    margin-left: 80px;
+}
+
+/* Watch/Listen-mobile */
+
+.sermons-main-video {
+    width: 100%;
+    height: 250px;
+    margin-top: -80px;
+}
+
+.engage-info {
+    margin: 20px 25px 100px 25px;
+    font-size: 20px;
+}
+
+.media-sermons a, .facebook-live a{
+    text-decoration: none;
+    color:#85b7a0;
+    margin-top: 20px;
+}
+
+/* Footer-Mobile */
 .contact {
     width: 100%;
     height: 100%;
-    margin-top: 40px;
+    margin-top: -40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -643,13 +1952,18 @@ input {
 
 .address {
     line-height: 25px;
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 .account {
     width: 150px;
     height: 40px;
-    margin: 0 0 20px 15px;
+    margin: 0 0 0px 15px;
     border-radius: 24px;
     border: none;
     background-color:coral;
@@ -673,156 +1987,46 @@ input {
 
 .account-footer {
     height: 30px;
-    margin: -5px 0 40px 0;
+    /* margin: -5px 0 40px 0; */
 }
 
-.footer-info {
-    margin: 20px 0;
+.contact .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-info a:hover {
+    color:#0BBAB3;
+}
+
+.footer-info h3 {
+    color: coral;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.icons {
+    margin-top: 10px;
 }
 
 .menu {
     display: none;
 }
 
-@media screen and (min-width: 850px) {
-
-    #logo .church-name {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-weight: 700;
-        font-family: 'Allura', cursive;
-        text-align: start;
-        line-height: 20px;
-        margin: 0 50px 0 20px;
-        padding-top: 5px;
-    } 
-
-    .xs-menu {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #container > nav > .menu {
-        height: 80px;
-    }
-
-    #container {
-        width: 100%;
-        height: 80px;
-        margin: 0 auto;
-        box-shadow: -2px -2px 5px white, 2px -2px 5px white;
-    }
-
-    #container>nav {
-        width: 100%;
-        display: flex;
-        max-height: 60px;
-    }
-
-    #container>nav>ul {
-        max-width: 700px;
-        margin: 0px;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items:flex-end;
-        gap: 5px;
-        position: absolute;
-        z-index: 5000;
-        right: -10px;
-        /*   min-width:60%; */
-    }
-
-    #container>nav>ul>li {
-        line-height: 60px;
-        margin: 0 0px;
-        padding: 0;
-        text-align: center;
-        display: inline-block;
-        min-width: 120px;
-
-    }
-
-    #container>nav>ul>li>a {
-        position: relative;
-        margin: 0 10px;
-        color: white;
-        font-size: 14px;
-        text-decoration: none;
-    }
-
-    #container>nav>ul>li:hover {
-        border-bottom: 2px solid white;
-        background-color: #082f54;
-    }
-
-    #container>nav>ul>.dropdown:hover {
-        border-bottom: none;
-    }
-
-    #container>nav>ul>.dropdown:hover>.dd {
-        display: block;
-    }
-
-    .dropdown:hover>a .fa-caret-down {
-        display: none;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    #container>nav>ul>li>div {
-        position: absolute;
-        padding: 0 10px;
-        background-color: black;
-        display: none;
-        background-color: lightgrey;
-        min-width: 200px;
-    }
-
-    #container>nav>ul>li>div>ul {
-        margin: 0px 0 10px 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    #u_a_c {
-        position: relative;
-        width: 100%;
-    }
-
-    #up_arrow {
-        position: relative;
-        width: 20px;
-        height: 20px;
-        left: 42%;
-        top: -10px;
-        background-color: lightgray;
-        transform: rotate(45deg);
-    }
-
-    #container>nav>ul>li>div>ul>li:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    #container>nav>ul>li>div>ul>li>a {
-        padding: 5px;
-        color: black;
-    }
+.verse {
+    display: none;
 }
+
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
 
+/* HomePage Tablet */
     .content p {
         text-align: center;
         width: 100%;
@@ -830,9 +2034,22 @@ input {
         padding: 20px 60px 0 60px;
     }
 
-    .service {
-        width: 100%;
-        padding-left: 150px;
+    .about .service {
+        text-align: center;
+        border-radius: 2px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.4s ease;
+    }
+
+    .service-times {
+        text-align: center;
+    }
+
+    .location {
+        text-align: center;
     }
 
     .service p {
@@ -842,7 +2059,6 @@ input {
     .greeting h2 {
         font-size: 38px;
     }
-
 
     .about {
         width: 100%;
@@ -859,9 +2075,8 @@ input {
 
     iframe {
         width: 500px;
-        height: 350px;
+        height: 300px;
         margin-top: 20px;
-        padding: 0 0 30px 0;
     }
 
     .showcase {
@@ -897,7 +2112,6 @@ input {
 
     .card {
         margin-right: 10px;
-        /* width: 350px; */
     }
 
     .fall-info {
@@ -927,7 +2141,332 @@ input {
         margin-top: 10px;
     }
 
-    .footer-info {
+    .newsletter {
+        width: 100%;
+        height: 500px;
+        background-color: #0BBAB3;
+        color: white;
+        margin: 40px 5px 0px 0px;
+        text-align: left;
+        border-radius: 2px;
+        /* padding: 20px; */
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-2.5rem);
+        transition: all 0.4s ease;
+    } 
+
+    .first-name, .last-name, .email {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 20px 50px;
+    }
+
+    .newsletter-btn {
+        margin-left: 50px;
+    }
+
+    .bible-verse .verse {
+        display: none;
+    }
+
+/* About Page-Tablet */
+
+    .old-church-pic {
+        width: 100%;
+        height: 850px;
+    }
+
+/* New Visitor Page-Tablet */
+    .journey-img {
+        width: 100%;
+        height: 450px;
+    }
+    
+    .journey-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 38px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .journey-text span {
+        font-size: 28px;
+        width: 150px;
+        height: 30px;
+        padding: 8px;
+        letter-spacing: 3px;
+        background-color:#0BBAB3;
+        color: white;
+    }
+
+    .starting-text {
+        position: relative;
+        text-align: center;
+        font-size: 32px;
+        top: 90px;
+        color:#e67248; 
+    }
+
+    .starting-info {
+        position: relative;
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        margin-top: 130px;
+        padding: 0 30px;
+        line-height: 25px;
+    }
+
+    .small-groups {
+        width: 100%;
+        margin-top: 220px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .small-groups h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .small-groups span {
+        color:#E67248;
+    }
+
+    .small-groups p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .serve-info {
+        width: 100%;
+        margin: 100px auto;
+        padding: 50px 30px 20px 30px;
+        text-align: center;
+    }
+
+/* Our Team-Tablet */
+
+    .senior-pastor-img, .student-pastor-img, .worship-leader-img, .ministry-assistant-img {
+        width: 300px;
+    }
+
+    .meet-team p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+/* Contact page-Tablet */
+
+    .contact-info p {
+        text-align: center;
+        line-height: 20px;
+        font-size: 18px;
+    }
+
+/* Adult page-Tablet */
+
+    .adult-img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    } 
+
+    .adult-text {
+        margin-top: -180px;
+        font-size: 42px;
+        color: white;
+    }
+
+    .adult-groups {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adult-groups-part1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    .adult-groups-part2 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+/* Youth/Kids Page Tablet */
+
+    .youth-img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+
+    .youth-text {
+        margin-top: -170px;
+        font-size: 42px;
+        color: white;
+        text-transform:uppercase;
+        letter-spacing: 3px;
+    }
+
+    .youth-info {
+        text-align: center;
+        padding: 120px 30px 30px 30px;
+        background-color: lightgray;
+    }
+
+    .youth-info h2 {
+        font-size: 38px;
+        text-transform: uppercase;
+    }
+
+    .youth-info {
+        margin-top: 50px;
+    }
+
+    .youth-info p {
+        font-size: 18px;
+    }
+
+    .youth-events h2 {
+        text-align: center;
+    }
+
+/* Children Page- Tablet */
+
+    .kids-main-video {
+        width: 100%;
+        height: 300px;
+        margin-top: -30px;
+    }
+    
+    .elementary-info {
+        padding: 30px 100px;
+    }
+
+/* Missions Page-Tablet */
+
+    .missions-main-img img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+
+    .missions-main-img h2 {
+        font-size: 32px;
+        margin-top: -220px;
+    }
+
+    .mission-info {
+        margin: 170px auto 100px auto;
+        padding: 0 25px;
+        text-align: center;
+    }
+    
+/* Watch/Listen Tablet */
+
+    .sermons-main-video {
+        width: 100%;
+        height: 300px;
+        margin-top: -40px;
+    }
+
+/* Events Page Tablet */
+
+    .event-img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+
+    .event-img-text {
+        margin-top: -175px;
+    }
+
+    .event-text {
+        font-size: 28px;
+        text-align: center;
+        color: coral;
+    }
+    
+    .event-image {
+        width: 250px;
+        height: 200px;
+        align-items: flex-start;
+    }
+    
+/* Give Page-Tablet */
+
+    .give-img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+    
+    .give-img-text {
+        margin-top: -175px;
+    }
+    
+    .give-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 150px 30px;
+    }
+
+/* User Account Page Tablet */
+
+    .user-account-img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+
+    .account-wrapper {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .account-wrapper .img-title {
+        font-family: 'Allura', cursive;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 5rem 0;
+        width: 400px;
+    }
+
+    .img-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: white;
+        position: absolute;
+        text-align: center;
+    }
+
+    .church-life-img {
+        height: 450px;
+    }
+
+/* Footer Tablet */
+
+    .contact .footer-info {
         display: flex;
         flex-direction: row;
         gap: 50px;
@@ -940,15 +2479,34 @@ input {
     .footer-info p {
         font-size: 16px;
         font-weight: 700;
-        margin-bottom: 50px;
     }
 
     .footer-info p:hover {
         cursor:pointer;
     }
+
+    .icons {
+        margin-left: -30px;
+    }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+
+/* Homepage-Desktop */
+    #container>nav>ul {
+        max-width: 600px;
+        margin-left: -10px;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items:flex-end;
+        gap: 20px;
+        position: absolute;
+        z-index: 5000;
+        right: -10px;
+        /*   min-width:60%; */
+    }
 
     .showcase .video-wrapper .graphic-banner {
         max-width: 22rem;
@@ -973,6 +2531,14 @@ input {
         font-size: 8rem;
     }
 
+    .content {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 200px auto 30px auto;
+    }
 
     .content p {
         text-align: center;
@@ -981,6 +2547,58 @@ input {
         padding: 20px 60px 0 60px;
     }
 
+    .greeting h2{
+        font-size: 56px;
+    }
+
+    .about .service {
+        width: 100%;
+        height: 500px;
+        background-color: #85b7a0;
+        color: white;
+        margin: 40px 50px 50px 0;
+        text-align: left;
+        border-radius: 2px;
+        padding: 80px 100px 0 100px;
+        display: flex;
+        transition: all 0.4s ease;
+    }
+
+    .bible-verse .verse {
+        width: 300px;
+        height: 300px;
+        display: block;
+        margin: -330px 0 0 570px;
+    }
+
+    .first-name, .last-name, .email {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 20px 50px;
+    }
+
+    .newsletter-btn {
+        margin-left: 50px;
+    }
+
+    .newsletter {
+        width: 100%;
+        height: 500px;
+        background-color: #0BBAB3;
+        color: white;
+        text-align: left;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-2.5rem);
+        transition: all 0.4s ease;
+    } 
+    
+    .newsletter h2 {
+        margin-left: 50px;
+    }
     .main-img {
         display: none;
     }
@@ -994,11 +2612,6 @@ input {
 
     .showcase-container .main-img {
         width: 100%;
-    }
-
-    .card {
-        margin-right: 35px;
-        width: 300px;
     }
 
     .fall-info {
@@ -1015,9 +2628,348 @@ input {
     }
 
     iframe {
-        width: 500px;
-        height: 350px;
-        margin-top: 20px;
-        padding: 0 0 30px 0;
+        width: 55%;
+        height: 450px;
+        margin: -20px 0 0 150px;
+        padding: 0 0 70px 0;
     }
+
+/* About Page-Desktop */
+
+    .old-church-pic {
+        width: 100%;
+        height: 1050px;
+    }
+
+/* New Visitor-Desktop */
+
+    .journey-img {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .journey-text {
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        font-size: 42px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .message p {
+        font-size: 20px;
+    }
+
+    .starting-text {
+        position: relative;
+        text-align: center;
+        font-size: 38px;
+        top: 90px;
+        color:#e67248; 
+    }
+
+    .starting-info {
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        margin-top: 130px;
+        padding: 0 60px;
+        line-height: 32px;
+    }
+
+    .small-groups p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .study-info p {
+        font-size: 20px;
+    }   
+
+    .serve-info {
+        width: 100%;
+        margin: 100px auto;
+        padding: 70px 30px 20px 30px;
+        text-align: center;
+    }
+
+    .serve-info p {
+        font-size: 20px;
+    }
+
+/* Our Team-Desktop */
+
+    .senior-pastor-img, .student-pastor-img, .worship-leader-img, .ministry-assistant-img {
+        width: 400px;
+    }
+
+    .meet-team p {
+        font-size: 20px;
+        padding: 0 100px;
+        text-align: center;
+    }
+
+/* Contact page-Desktop */
+
+    .contact-info p {
+        text-align: center;
+        line-height: 20px;
+        font-size: 20px;
+    }
+
+/* Adult page-Desktop */
+
+    .adult-img {
+        width: 100%;
+        height: 350px;
+        margin: -50px 0 30px 0;
+    } 
+
+    .adult-text {
+        margin-top: -230px;
+        font-size: 42px;
+        color: white;
+    }
+
+    .adult-content {
+        margin-bottom: 20px;
+    }
+
+    .adult-groups {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adult-groups-part1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .adult-groups-part2 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .bible-studies img, .young-adult img, .womens-ministry img, .mens-ministry img {
+        height: 350px;
+    }
+
+/* Youth Page Desktop */
+
+    .youth-img {
+        width: 100%;
+        height: 350px;
+        margin-top: -50px;
+    }
+
+    .youth-text {
+        margin-top: -190px;
+    }
+
+    .youth-info p {
+        font-size: 20px;
+    }
+
+    .youth-events-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .christmas-party {
+        margin-top: 20px;
+    }
+
+/* Children Page-Desktop */
+
+    .kids-main-video {
+        width: 100%;
+        height: 350px;
+        margin: -40px auto 30px auto;
+    }
+
+    .elementary-classes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .elementary-info {
+        padding: 30px 100px;
+    }
+
+/* Missions Page-Desktop */
+
+    .missions-main-img img {
+        width: 100%;
+        height: 300px;
+        margin-top: -50px;
+    }
+
+    .missions-main-img h2 {
+        font-size: 32px;
+        margin-top: -220px;
+    }
+
+    .mission-info {
+        margin: 170px auto 100px auto;
+        padding: 0 25px;
+        text-align: center;
+    }
+
+/* Watch/Listen Desktop */
+
+    .sermons-main-video {
+        width: 100%;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .engage-info {
+        margin: 50px 50px 100px 200px;
+        font-size: 20px;
+    }
+
+/* Events Page Desktop */
+
+    .event-img {
+        width: 100%;
+        height: 350px;
+        margin-top: -50px;
+    }
+
+    .event-img-text {
+        margin-top: -190px;
+    }
+
+    .event-text {
+        font-size: 28px;
+        text-align: center;
+        color: coral;
+    }
+    
+    .event-image {
+        width: 300px;
+        height: 250px;
+        align-items: flex-start;
+    }
+    
+/* Give Page Desktop */
+
+    .give-img {
+        width: 100%;
+        height: 350px;
+        margin-top: -50px;
+    }
+    
+    .give-img-text {
+        margin-top: -200px;
+        font-size: 52px;
+        letter-spacing: 7px;
+    }
+    
+    .give-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 150px 100px;
+    }
+
+    .give-info p {
+        font-size: 18px;
+    }
+
+    .give-info h2 {
+        margin-top: 50px;
+    }
+
+/* User Account Page Desktop */
+
+    .user-account-img {
+        width: 100%;
+        height: 350px;
+        margin-top: -50px;
+    }
+
+    .account-wrapper {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .account-wrapper .img-title {
+        font-family: 'Allura', cursive;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 5rem 0;
+        width: 400px;
+    }
+
+    .img-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: white;
+        position: absolute;
+        text-align: center;
+    }
+
+    .church-life-img {
+        height: 450px;
+    }
+
+/* Footer-Desktop */
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .church-info {
+        margin-left: 30px;
+        gap: 50px;
+    }
+    .address {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .contact .footer-info {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        margin-top: 20px;
+        gap: 50px;
+    }
+
+    .footer-info h2{
+        font-size: 24px;
+    }
+
+    .footer-info p {
+        font-size: 16px;
+        font-weight: 700;
+        /* margin-bottom: 50px; */
+    }
+
+    .footer-info p:hover {
+        cursor:pointer;
+    }
+
+    .icons {
+        margin-left: -30px;
+    }
+
 }

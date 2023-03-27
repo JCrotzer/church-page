@@ -33,6 +33,7 @@ def login_user():
     session['user_id'] = this_user.id
     return redirect('/users/account')
 
+
 # READ 
 
 @app.route('/')
@@ -94,6 +95,23 @@ def children_info():
 @app.route('/missions')
 def missions_info():
     return render_template("missions.html")
+
+@app.route('/watch_listen/')
+def watch_listen():
+    return render_template("watch_listen.html")
+
+@app.route('/events')
+def event_info():
+    return render_template("events.html")
+
+@app.route('/give')
+def give_info():
+    return render_template("give.html")
+
+@app.route('/bible_studies/')
+def bible_studies():
+    return render_template("bible_studies.html")
+
     
 @app.route('/user/logout')
 def logout():

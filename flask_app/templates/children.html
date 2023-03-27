@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/youth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/homepage.css') }}">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Ms+Madi&family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -94,8 +94,8 @@
                             <ul>
                                 <li><label><a href="/adults">Adults</a></label></li>
                                 <li><label><a href="/youth">Youth(6th-12th)</a></label></li>
-                                <li><label>Kids</label></li>
-                                <li><label>Missions</label></li>
+                                <li><label><a href="/children">Kids</a></label></li>
+                                <li><label><a href="/missions">Missions</a></label></li>
                         </div>
                     </li>
                     <li><label>Watch/Read</label></li>
@@ -132,14 +132,14 @@
 
                         <li><a href="/adults">Adults</a></li>
                         <li><a href="/youth">Youth(6th-12th)</a></li>
-                        <li><a href="#">Kids</a></li>
-                        <li><a href="#">Missions</a></li>
+                        <li><a href="/children">Kids</a></li>
+                        <li><a href="/missions">Missions</a></li>
                     </ul>
                 </div>
             </li>
-                    <li><a href="#">Watch/Read</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Give</a></li>
+                    <li><a href="/watch_listen/">Watch/Read</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/give">Give</a></li>
                     <li><a href="/users/account">My Account</a></li>
                 </ul>
             </nav>
@@ -147,9 +147,12 @@
     </div>
     
     <main>
-        <div class="main-img">
-            <img class="children-img" src="{{ url_for('static', filename='img/children.jpg') }}" alt="Children pic">
-            <h2>Kids</h2>
+        <div class="children-main-img">
+            <!-- <img class="children-img" src="{{ url_for('static', filename='img/children.jpg') }}" alt="Children pic"> -->
+            <video playsinline autoplay muted class="kids-main-video">
+                <source src="\static\img\childrens-ministry.mp4" type="video/mp4">
+            </video>
+            <!-- <h2 class="child-text">Kids</h2> -->
         </div>
 
         <div class="elementary-info">
@@ -161,78 +164,81 @@
             <li>God loves me.</li>
             <li>Jesus wants to be my friend forever.</li>
         </div>
-
-        <div class="little-lambs">
-            <img class="lamb-img" src="{{ url_for('static', filename='img/little-lambs.jpg') }}" alt="Lamb pic">
-            <p class="info">Lambs<br>Birth - 1 yr</p>
+        <div class="elementary-classes">
+            <div class="little-lambs">
+                <img class="lamb-img" src="{{ url_for('static', filename='img/little-lambs.jpg') }}" alt="Lamb pic">
+                <p class="info">Lambs<br>Birth - 1 yr</p>
+            </div>
+            <div class="tigers">
+                <img class="tiger-img" src="{{ url_for('static', filename='img/tigers.jpg') }}" alt="Tiger pic">
+                <p class="info">Tigers<br>1-2 years</p>
+            </div>
+            <div class="monkeys">
+                <img class="monkey-img" src="{{ url_for('static', filename='img/monkeys.jpg') }}" alt="Monkey pic">
+                <p class="info">Monkeys<br>2-3 years</p>
+            </div>
+            <div class="rhinos">
+                <img class="rhino-img" src="{{ url_for('static', filename='img/rhinos.jpg') }}" alt="Rhino pic">
+                <p class="info">Rhinos<br>3-4 years</p>
+            </div>
+            <div class="elementary">
+                <img class="elementary-img" src="{{ url_for('static', filename='img/elementary.jpg') }}" alt="Elementary grade pic">
+                <p class="info">Kindergarten-5th grade</p>
+            </div>
         </div>
-        <div class="tigers">
-            <img class="tiger-img" src="{{ url_for('static', filename='img/tigers.jpg') }}" alt="Tiger pic">
-            <p class="info">Tigers<br>1-2 years</p>
-        </div>
-        <div class="monkeys">
-            <img class="monkey-img" src="{{ url_for('static', filename='img/monkeys.jpg') }}" alt="Monkey pic">
-            <p class="info">Monkeys<br>2-3 years</p>
-        </div>
-        <div class="rhinos">
-            <img class="rhino-img" src="{{ url_for('static', filename='img/rhinos.jpg') }}" alt="Rhino pic">
-            <p class="info">Rhinos<br>3-4 years</p>
-        </div>
-        <div class="elementary">
-            <img class="elementary-img" src="{{ url_for('static', filename='img/elementary.jpg') }}" alt="Elementary grade pic">
-            <p class="info">Kindergarten-5th grade</p>
-        </div>
-
         <div class="childrens-church">
             <h2>Childrens Church</h2>
-            <p>Childrens church is for Kindergarten-5th grade during church service in the recess hall. Your child experiences worship through music,
+            <p>Childrens church is available for Kindergarten-5th grade during church service in the recess hall. Children will worship through music,
                 video, storytelling, scripture and games.</p>
         </div>
+
+        <div class="contact">
+            <div class="church-info">
+                <div class="church-name">
+                    <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
+                    <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
+                </div>
+    
+                <div class="address">
+                    <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
+                        Spring Hill,TN 37174
+                    </p>
+                    <div class="account">
+                        <a href="/users/account" class="account">My Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="our-church">
+                    <h3>Our Church</h3>
+                    <a href="#service-info"><p>Times & Locations</p></a>
+                    <a href="/events"><p>Calendar</p></a>
+                    <a href="/contact"><p>Contact Us</p></a>
+                </div>
+    
+                <div class="next-steps">
+                    <h3>Next Steps</h3>
+                    <a href=""><p>Baptism</p></a>
+                    <a href=""><p>Join our church</p></a>
+                    <a href=""><p>Serving</p></a>
+                    <a href="/missions"><p>Missions</p></a>
+                </div>
+    
+                <div class="get-connected">
+                    <h3>Get Connected</h3>
+                    <a href="/adults"><p>LifeGroups</p></a>
+                    <a href="/children"><p>Children</p></a>
+                    <a href="/youth"><p>Students</p></a>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/profile.php?id=100064722064699"><img src="{{ url_for('static', filename='img/png/002-facebook.png') }}" alt="facebook-icon"></a>
+                <a href=""><img src="{{ url_for('static', filename='img/png/001-instagram.png') }}" alt="Instagram-icon"></a>
+                <a href="https://www.youtube.com/@fbcspringhill4877"><img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon"></a>
+            </div>
+        </div>
     </main>
-    <div class="contact">
-        <div class="church-name">
-            <!-- <img class="logo" src="{{ url_for('static', filename='img/cross.jpg') }}" alt="Cross"> -->
-            <h2>First Baptist Church</br><span>of Spring Hill</span></h2>
-        </div>
-
-        <div class="address">
-            <p><i class="fa fa-map-marker map-icon" aria-hidden="true"></i>5219 Main Street<br>
-                Spring Hill,TN 37174
-            </p>
-            <div class="account">
-                <a href="/users/account" class="account">My Account</a>
-            </div>
-        </div>
-        <div class="footer-info">
-            <div class="our-church">
-                <h2>Our Church</h2>
-                <p>Times & Locations<br>
-                Calendar<br>
-                Contact Us</p>
-            </div>
-
-            <div class="next-steps">
-                <h2>Next Steps</h2>
-                <p>Baptism<br>
-                Join our church<br>
-                Serving<br>
-                Missions</p>
-            </div>
-
-            <div class="get-connected">
-                <h2>Get Connected</h2>
-                <p>LifeGroups<br>
-                Children<br>
-                Students</p>
-            </div>
-        </div>
-        <div class="icons">
-            <img src="{{ url_for('static', filename='img/png/002-facebook.png') }}" alt="facebook-icon">
-            <img src="{{ url_for('static', filename='img/png/001-instagram.png') }}" alt="Instagram-icon">
-            <img src="{{ url_for('static', filename='img/png/003-youtube.png') }}" alt="Youtube-icon">
-        </div>
-    </div>
-<!-- </main> -->
+    
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
