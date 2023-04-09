@@ -38,7 +38,7 @@ def login_user():
 
 @app.route('/')
 def index():
-    return render_template("homepage.html")
+    return render_template("index.html")
 
 @app.route('/users/account')
 def user_account():
